@@ -11,7 +11,7 @@ module.exports = {
   pathPrefix: '/',
 
   templates: {
-    Post: '/:category/:id',
+    Post: '/:year/:id',
     Tag: '/tag/:id'
   },
 
