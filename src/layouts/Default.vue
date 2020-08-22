@@ -11,9 +11,12 @@
       </div>
     </header>
 
-    <main class="main">
-      <slot/>
-    </main>
+    <div class="container">
+        <Author class="aside" />
+      <main class="main">
+        <slot/>
+      </main>
+    </div>
 
     <footer class="footer">
       <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
@@ -26,6 +29,7 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import ToggleTheme from '~/components/ToggleTheme.vue'
+import Author from "~/components/Author.vue";
 
 export default {
   props: {
@@ -33,7 +37,8 @@ export default {
   },
   components: {
     Logo,
-    ToggleTheme
+    ToggleTheme,
+    Author
   }
 }
 </script>
@@ -60,10 +65,27 @@ export default {
     width: 100%;
   }
 }
+.container {
+  @media screen and (min-width:1600px) {
+    margin: 0 auto;
+    width:1280px;
+    display: flex;
+  }
+}
+.aside {
+  @media screen and (min-width: 1600px) {
+    width:340px;
+    margin: 0 auto;
+    position: fixed;
+  }
+}
 
 .main {
   margin: 0 auto;
   padding: 1.5vw 15px 0;
+  @media screen and (min-width: 1600px) {
+    margin-right: 0;
+  }
 }
 
 .footer {
