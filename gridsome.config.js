@@ -11,7 +11,7 @@ module.exports = {
   pathPrefix: '/ddochea0314.github.io',
 
   templates: {
-    Post: '/:title',
+    Post: '/:id',
     Tag: '/tag/:id'
   },
 
