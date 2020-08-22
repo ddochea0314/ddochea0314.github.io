@@ -1,5 +1,6 @@
 ---
 title: Markdown test file
+category: test
 id : 2
 date: 2019-02-06
 published: true

@@ -1,5 +1,6 @@
 ---
 title: A post with a cover image
+category: test
 id: 1
 date: 2019-01-07
 published: true

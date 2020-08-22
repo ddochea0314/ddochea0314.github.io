@@ -8,10 +8,10 @@ module.exports = {
   siteName: 'Gridsome Blog Starter',
   siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
   siteUrl: 'https://ddochea0314.github.io',
-  pathPrefix: '/ddochea0314.github.io',
+  pathPrefix: '/',
 
   templates: {
-    Post: '/:id',
+    Post: '/:category/:id',
     Tag: '/tag/:id'
   },
 
