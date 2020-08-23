@@ -42,7 +42,7 @@ export default {
   },
   metaInfo () {
     return {
-      title: this.$page.post.title,
+      title: this.$page.post.title + " - " + this.$static.metadata.siteName,
       meta: [
         {
           name: 'description',
@@ -53,6 +53,14 @@ export default {
   }
 }
 </script>
+
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
 
 <page-query>
 query Post ($id: ID!) {

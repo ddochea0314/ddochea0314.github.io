@@ -40,7 +40,7 @@ import PostCard from "~/components/PostCard.vue";
 
 export default {
   metaInfo: {
-    title: 'Index'
+    // title: 'Index'
   },
   components: {
     PostCard,
