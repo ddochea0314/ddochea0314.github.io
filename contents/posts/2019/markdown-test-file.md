@@ -1,7 +1,7 @@
 ---
 title: Markdown test file
 category: test
-id : 2
+id: 2
 date: 2019-02-06
 published: true
 tags: ['Markdown','Test files']
@@ -46,12 +46,6 @@ closing hashes don't even need to match the number of hashes
 used to open the header. (The number of opening hashes
 determines the header level.)
 
-
-### Images
-
-Images are added with `![Image Alt](./images/image.jpg)`
-
-![Image](./images/alexandr-podvalny-220262-unsplash.jpg)
 
 
 ### Blockquotes

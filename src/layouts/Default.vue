@@ -1,44 +1,53 @@
 <template>
-  <div id="app">
-
+  <div class="layout">
     <header class="header">
       <div class="header__left">
-        <Logo v-if="showLogo" /> 
+        <!-- <Logo v-if="showLogo" />  -->
       </div>
       
       <div class="header__right">        
         <ToggleTheme />
       </div>
     </header>
-
     <div class="container">
-        <Author class="aside" />
+      <div class="aside">
+        <div class="wrapper">
+          <Author showTitle="true" />
+        </div>
+      </div>
       <main class="main">
         <slot/>
       </main>
     </div>
 
     <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
+      <span class="footer__copyright">Copyright ddochea {{ new Date().getFullYear() }}. </span>
       <span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a></span>
     </footer>
 
   </div>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
 <script>
-import Logo from '~/components/Logo.vue'
-import ToggleTheme from '~/components/ToggleTheme.vue'
+
 import Author from "~/components/Author.vue";
+import ToggleTheme from "~/components/ToggleTheme.vue";
 
 export default {
   props: {
     showLogo: { default: true }
   },
   components: {
-    Logo,
-    ToggleTheme,
-    Author
+    Author,
+    ToggleTheme
   }
 }
 </script>
@@ -66,24 +75,28 @@ export default {
   }
 }
 .container {
-  @media screen and (min-width:1600px) {
+  @media screen and (min-width:1300px) {
     margin: 0 auto;
     width:1280px;
     display: flex;
   }
 }
 .aside {
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1300px) {
     width:340px;
     margin: 0 auto;
-    position: fixed;
+    padding: calc(var(--space) / 2) 0;
+    .wrapper {
+      top:0;
+      position: sticky;
+    }
   }
 }
 
 .main {
   margin: 0 auto;
   padding: 1.5vw 15px 0;
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1300px) {
     margin-right: 0;
   }
 }

@@ -1,29 +1,25 @@
 // This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
-// Changes here requires a server restart.
+// Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome Blog Starter',
-  siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
+  siteName: '또치의 삽질 보관함',
+  siteDescription: '시간과 삽을 연성하여 뻘짓을 만드는 놀라움을 선보이는 곳',
   siteUrl: 'https://ddochea0314.github.io',
   pathPrefix: '/',
-
   templates: {
-    Post: '/:year/:id',
+    Post: '/:id',
     Tag: '/tag/:id'
   },
-
   plugins: [
     {
-      // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Post',
-        path: 'content/posts/*.md',
+        path: 'contents/**/*.md',
         refs: {
-          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
             typeName: 'Tag',
             create: true
@@ -32,7 +28,6 @@ module.exports = {
       }
     }
   ],
-
   transformers: {
     //Add markdown support to all file-system sources
     remark: {

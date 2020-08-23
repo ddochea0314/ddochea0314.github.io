@@ -32,11 +32,11 @@
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
-import Author from '~/components/Author.vue'
+// import Author from '~/components/Author.vue'
 
 export default {
   components: {
-    Author,
+    // Author,
     PostMeta,
     PostTags
   },
@@ -58,9 +58,9 @@ export default {
 query Post ($id: ID!) {
   post: post (id: $id) {
     title
-    path
-    date (format: "D. MMMM YYYY")
+    date (format: "YYYY-MM-DD")
     timeToRead
+    path
     tags {
       id
       title

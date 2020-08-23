@@ -21,8 +21,8 @@ query {
         date (format: "D. MMMM YYYY")
         timeToRead
         description
-        cover_image (width: 770, height: 380, blur: 10)
         path
+        cover_image (width: 770, height: 380, blur: 10)
         tags {
           id
           title
@@ -35,16 +35,16 @@ query {
 </page-query>
 
 <script>
-import Author from '~/components/Author.vue'
-import PostCard from '~/components/PostCard.vue'
+import PostCard from "~/components/PostCard.vue";
+// import Author from "~/components/Author.vue";
 
 export default {
-  components: {
-    Author,
-    PostCard
-  },
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Index'
+  },
+  components: {
+    PostCard,
+    // Author
   }
 }
 </script>
