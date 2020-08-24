@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: '또치의 삽질 보관함',
+  siteName: '또치의 삽질 보관함 v2.0',
   siteDescription: '시간과 삽을 연성하여 뻘짓을 만드는 놀라움을 선보이는 곳',
   siteUrl: 'https://ddochea0314.github.io',
   pathPremfix: '/',

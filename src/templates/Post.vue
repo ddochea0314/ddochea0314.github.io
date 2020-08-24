@@ -121,6 +121,7 @@ query Post ($id: ID!) {
       margin-left: calc(var(--space) * -1);
       display: block;
       max-width: none;
+      box-shadow: 1px 1px 5px 0 rgba(0,0,0,.04), 1px 1px 15px 0 rgba(0,0,0,.06);
     }
   }
 }
