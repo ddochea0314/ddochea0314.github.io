@@ -9,7 +9,7 @@ module.exports = {
   siteDescription: '시간과 삽을 연성하여 뻘짓을 만드는 놀라움을 선보이는 곳',
   siteUrl: 'https://ddochea0314.github.io',
   pathPremfix: '/',
-  titleTemplate: '%s', // https://gridsome.org/docs/config/#titletemplate
+  // titleTemplate: '%s', // https://gridsome.org/docs/config/#titletemplate
   icon: './src/favicon.png', // https://gridsome.org/docs/config/#icon
   templates: {
     Post: '/:id',

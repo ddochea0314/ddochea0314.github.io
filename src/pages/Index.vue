@@ -42,6 +42,21 @@ export default {
   components: {
     PostCard,
     // Author
+  },
+  metaInfo() {
+    return {
+      title: 'Home'
+      // meta: [
+      //   {
+      //     key: 'google-site-verification',
+      //     name: 'google-site-verification',
+      //   },
+      //   { property: "og:type", content: 'website' },
+      //   { property: "og:title", content: this.$static.metadata.siteName },
+      //   { property: "og:description", content: this.$static.metadata.siteDescription },
+      //   { property: "og:url", content: this.$static.metadata.siteUrl }
+      // ]
+    }
   }
 }
 </script>

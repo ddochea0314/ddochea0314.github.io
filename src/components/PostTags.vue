@@ -19,7 +19,7 @@ export default {
   &__link {
 	min-width: 48px;
 	margin-right: .7em;
-	font-size: .8em;
+	font-size: 1em;
 	color: currentColor;
 	text-decoration: none;
 	background-color: var(--bg-color);

@@ -42,7 +42,7 @@ export default {
   },
   metaInfo() {
     return this.$seo({
-      title: `${this.$page.post.title} - ${this.$static.metadata.siteName}`,
+      title: `${this.$page.post.title}`,
       siteName : this.$static.metadata.siteName,
       description: this.$page.post.description,
       keywords: this.$page.post.tags,
@@ -85,7 +85,7 @@ query {
 query Post ($id: ID!) {
   post: post (id: $id) {
     title
-    date (format: "YYYY-MM-DD")
+    date (format: "D. MMMM YYYY")
     timeToRead
     path
     tags {
@@ -130,14 +130,15 @@ query Post ($id: ID!) {
       margin-top: 0;
     }
 
-    p:first-of-type {
-      font-size: 1.2em;
-      color: var(--title-color);
-    }
+    // p:first-of-type {
+    //   font-size: 1.2em;
+    //   color: var(--title-color);
+    // }
 
     img {
-      width: calc(100% + var(--space) * 2);
-      margin-left: calc(var(--space) * -1);
+      // width: calc(100% + var(--space) * 2);
+      // margin-left: calc(var(--space) * -1);
+      width:100%;
       display: block;
       max-width: none;
       box-shadow: 1px 1px 5px 0 rgba(0,0,0,.04), 1px 1px 15px 0 rgba(0,0,0,.06);

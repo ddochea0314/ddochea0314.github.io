@@ -28,6 +28,16 @@
   </div>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName,
+    siteDescription,
+    siteUrl
+  }
+}
+</static-query>
+
 <script>
 
 import Author from "~/components/Author.vue";
@@ -40,6 +50,16 @@ export default {
   components: {
     Author,
     ToggleTheme
+  },
+  metaInfo() {
+    return {
+      meta: [
+        { property: "og:type", content: 'website' },
+        { property: "og:title", content: this.$static.metadata.siteName },
+        { property: "og:description", content: this.$static.metadata.siteDescription },
+        { property: "og:url", content: this.$static.metadata.siteUrl }
+      ]
+    }
   }
 }
 </script>

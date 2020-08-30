@@ -4,13 +4,13 @@ category: Bloglog
 id: 2
 date: 2020-08-30
 published: true
-tags: ['Gridsome', 'Vue', 'Blog', 'Github', 'Github Pages', 'utterances']
+tags: ['Gridsome', 'Vuejs', 'Github', 'Github Pages', 'utterances']
 series: false
 canonical_url: false
-description: "이제 utterances 기반의 댓글기능으로 소통을 할 수 있습니다. 🔮"
+description: "이제 댓글을 달 수 있습니다. utterances 덕분에 말이죠~ 👍"
 ---
 
-이제 댓글을 달 수 있습니다. utterances 라는 github issue API기반 오픈소스앱 덕분에 말이죠~ 👍
+이제 댓글을 달 수 있습니다. utterances 덕분에 말이죠~ 👍
 
 이번 시간엔 현재 블로그에 utterances 를 직접 적용한 경험을 바탕으로 Gridsome 기반의 블로그에 utterances 
 적용하는 방법을 공유해보도록 하겠습니다. 
