@@ -20,12 +20,14 @@ export default {
 	min-width: 48px;
 	margin-right: .7em;
 	font-size: 1em;
+	margin: .2em;
 	color: currentColor;
 	text-decoration: none;
 	background-color: var(--bg-color);
 	color: currentColor!important; //Todo: remove important;
 	padding: .5em;
 	border-radius: var(--radius);
+	display:inline-block;
   }
 }
 </style>
