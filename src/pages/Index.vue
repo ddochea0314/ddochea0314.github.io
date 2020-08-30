@@ -28,7 +28,7 @@ query {
       node {
         id
         title
-        date (format: "D. MMMM YYYY")
+        date (format: "YYYY. MM. DD")
         timeToRead
         description
         path
