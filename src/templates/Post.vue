@@ -29,6 +29,33 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
+<page-query>
+query Post ($id: ID!) {
+  post: post (id: $id) {
+    title
+    date (format: "D. MMMM YYYY")
+    timeToRead
+    path
+    tags {
+      id
+      title
+      path
+    }
+    description
+    content
+    cover_image (width: 860, blur: 10)
+  }
+}
+</page-query>
+
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
@@ -66,33 +93,6 @@ export default {
   }
 }
 </script>
-
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
-<page-query>
-query Post ($id: ID!) {
-  post: post (id: $id) {
-    title
-    date (format: "D. MMMM YYYY")
-    timeToRead
-    path
-    tags {
-      id
-      title
-      path
-    }
-    description
-    content
-    cover_image (width: 860, blur: 10)
-  }
-}
-</page-query>
 
 <style lang="scss">
 .post-title {

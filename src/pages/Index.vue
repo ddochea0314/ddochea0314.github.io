@@ -55,26 +55,16 @@ export default {
   },
   metaInfo() {
     return {
-      title: 'Home',
-      // meta: [
-      //   {
-      //     key: 'google-site-verification',
-      //     name: 'google-site-verification',
-      //   },
-      //   { property: "og:type", content: 'website' },
-      //   { property: "og:title", content: this.$static.metadata.siteName },
-      //   { property: "og:description", content: this.$static.metadata.siteDescription },
-      //   { property: "og:url", content: this.$static.metadata.siteUrl }
-      // ]
+      title: 'Home'
     }
-  },
-  metaInfo() {
-    return this.$seo({
-      title: 'Home',
-      siteName : this.$static.metadata.siteName,
-      description: this.$static.metadata.siteDescription,
-      url: this.$static.metadata.siteUrl
-    })
-  },
+  }
+  // metaInfo() {
+  //   return this.$seo({
+  //     title: 'Home',
+  //     siteName : this.$static.metadata.siteName,
+  //     description: this.$static.metadata.siteDescription,
+  //     url: this.$static.metadata.siteUrl
+  //   })
+  // },
 }
 </script>
