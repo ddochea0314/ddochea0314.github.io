@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <meta property="og:title" :content="$page.post.title" />
     <div class="post-title">
       <h1 class="post-title__text">
         {{ $page.post.title }}
@@ -21,7 +22,7 @@
       </div>
     </div>
 
-    <div class="post-comments">
+    <div id="comments" class="post-comments">
       <!-- Add comment widgets here -->
     </div>
 
@@ -50,6 +51,22 @@ export default {
         }
       ]
     }
+  },
+  mounted() {
+    const script = window.document.createElement("script");
+    const utterance = window.document.getElementById('comments');
+    const attrs = {
+      src : 'https://utteranc.es/client.js',
+      repo : 'ddochea0314/ddochea0314.github.io',
+      "issue-term": `(${this.$page.post.date}) - ${this.$page.post.title}`,
+      theme : "github-light",
+      crossorigin: "anonymous",
+      async : true
+    }
+    Object.entries(attrs).forEach(([key, value]) => {
+      script.setAttribute(key, value);
+    });
+    utterance.appendChild(script);
   }
 }
 </script>
@@ -122,6 +139,14 @@ query Post ($id: ID!) {
       display: block;
       max-width: none;
       box-shadow: 1px 1px 5px 0 rgba(0,0,0,.04), 1px 1px 15px 0 rgba(0,0,0,.06);
+    }
+    span.img-title {
+      text-align:center;
+      display:block;
+      font-size:.8em;
+    }
+    span.line-through {
+      text-decoration: line-through;
     }
   }
 }

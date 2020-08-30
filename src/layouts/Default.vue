@@ -15,7 +15,7 @@
           <Author showTitle="true" />
         </div>
       </div>
-      <main class="main">
+      <main id="main" class="main">
         <slot/>
       </main>
     </div>
