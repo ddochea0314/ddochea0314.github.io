@@ -42,16 +42,10 @@ export default {
   },
   metaInfo() {
     return this.$seo({
-      title: `${this.$page.post.title}`,
+      title: this.$page.post.title,
       siteName : this.$static.metadata.siteName,
       description: this.$page.post.description,
-      keywords: this.$page.post.tags,
-      meta: [
-        {
-          name: 'description',
-          content: this.$page.post.description
-        }
-      ]
+      keywords: this.$page.post.tags.map(t => t.title).join(",")
     })
   },
   mounted() {

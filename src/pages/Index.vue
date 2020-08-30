@@ -11,6 +11,16 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName,
+    siteDescription,
+    siteUrl
+  }
+}
+</static-query>
+
 <page-query>
 query {
   posts: allPost(filter: { published: { eq: true }}) {
@@ -45,7 +55,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: 'Home'
+      title: 'Home',
       // meta: [
       //   {
       //     key: 'google-site-verification',
@@ -57,6 +67,14 @@ export default {
       //   { property: "og:url", content: this.$static.metadata.siteUrl }
       // ]
     }
-  }
+  },
+  metaInfo() {
+    return this.$seo({
+      title: 'Home',
+      siteName : this.$static.metadata.siteName,
+      description: this.$static.metadata.siteDescription,
+      url: this.$static.metadata.siteUrl
+    })
+  },
 }
 </script>

@@ -10,11 +10,11 @@ export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
   head.htmlAttrs = { lang: 'ko' };
-  head.meta.push({
-    name : "viewport",
-    "data-key" : "viewport",
-    content : "width=device-width, initial-scale=1, viewport-fit=cover"
-  })
+  // head.meta.push({
+  //   name : "viewport",
+  //   "data-key" : "viewport",
+  //   content : "width=device-width, initial-scale=1, viewport-fit=cover"
+  // })
   head.meta.push({
     name: "google-site-verification",
     content : "OVIHzNht7I3Mf9zXHubqGB4Mba-1dVDK_xqGAlXg9z8"
