@@ -1,6 +1,5 @@
 <template>
   <Layout>
-    <meta property="og:title" :content="$page.post.title" />
     <div class="post-title">
       <h1 class="post-title__text">
         {{ $page.post.title }}
@@ -41,16 +40,19 @@ export default {
     PostMeta,
     PostTags
   },
-  metaInfo () {
-    return {
-      title: this.$page.post.title + " - " + this.$static.metadata.siteName,
+  metaInfo() {
+    return this.$seo({
+      title: `${this.$page.post.title} - ${this.$static.metadata.siteName}`,
+      siteName : this.$static.metadata.siteName,
+      description: this.$page.post.description,
+      keywords: this.$page.post.tags,
       meta: [
         {
           name: 'description',
           content: this.$page.post.description
         }
       ]
-    }
+    })
   },
   mounted() {
     const script = window.document.createElement("script");

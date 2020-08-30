@@ -10,6 +10,14 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
 <page-query>
 query Tag ($id: ID!) {
   tag (id: $id) {
@@ -41,9 +49,13 @@ export default {
     // Author,
     PostCard
   },
-  metaInfo: {
-    title: 'Hello, world!'
-  }
+  metaInfo() {
+    return this.$seo({
+      title: `${this.$page.tag.title} - ${this.$static.metadata.siteName}`,
+      siteName : this.$static.metadata.siteName,
+      keywords: this.$page.tag.title
+    })
+  },
 }
 </script>
 

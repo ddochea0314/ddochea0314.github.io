@@ -28,14 +28,6 @@
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
 
 import Author from "~/components/Author.vue";

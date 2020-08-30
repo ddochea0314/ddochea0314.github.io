@@ -28,6 +28,9 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      use: 'gridsome-plugin-seo'
     }
   ],
   transformers: {

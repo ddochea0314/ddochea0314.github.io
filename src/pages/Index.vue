@@ -39,9 +39,6 @@ import PostCard from "~/components/PostCard.vue";
 // import Author from "~/components/Author.vue";
 
 export default {
-  metaInfo: {
-    // title: 'Index'
-  },
   components: {
     PostCard,
     // Author
