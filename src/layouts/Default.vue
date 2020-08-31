@@ -88,9 +88,9 @@ export default {
 .main {
   margin: 0 auto;
   padding: 1.5vw 15px 0;
-  @media screen and (min-width: 1300px) {
-    margin-right: 0;
-  }
+  // @media screen and (min-width: 1300px) {
+  //   margin-right: 0;
+  // }
 }
 
 .footer {
