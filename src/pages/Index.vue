@@ -14,8 +14,8 @@
 <static-query>
 query {
   metadata {
-    siteName,
-    siteDescription,
+    siteName
+    siteDescription
     siteUrl
   }
 }
@@ -47,6 +47,7 @@ query {
 <script>
 import PostCard from "~/components/PostCard.vue";
 // import Author from "~/components/Author.vue";
+import SEO from "~/lib/seo.js";
 
 export default {
   components: {
@@ -54,17 +55,21 @@ export default {
     // Author
   },
   metaInfo() {
+    const type = 'website';
+    const title = 'Home';
+    const siteName = this.$static.metadata.siteName;
+    const description = this.$static.metadata.siteDescription;
     return {
-      title: 'Home'
+      title: title,
+      siteName : siteName,
+      description : description,
+      meta: SEO(
+        type
+      , this.$static.metadata.siteUrl
+      , siteName
+      , title
+      , description)
     }
   }
-  // metaInfo() {
-  //   return this.$seo({
-  //     title: 'Home',
-  //     siteName : this.$static.metadata.siteName,
-  //     description: this.$static.metadata.siteDescription,
-  //     url: this.$static.metadata.siteUrl
-  //   })
-  // },
 }
 </script>

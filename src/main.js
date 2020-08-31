@@ -5,6 +5,7 @@ import '~/assets/style/index.scss'
 
 // Import default layout so we don't need to import it to every page
 import DefaultLayout from '~/layouts/Default.vue'
+import { siteName, siteUrl } from "../gridsome.config.js";
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -18,5 +19,9 @@ export default function (Vue, { router, head, isClient }) {
   head.meta.push({
     name: "google-site-verification",
     content : "OVIHzNht7I3Mf9zXHubqGB4Mba-1dVDK_xqGAlXg9z8"
+  },
+  {
+    property: "by",
+    content: "ddochea"
   })
 }

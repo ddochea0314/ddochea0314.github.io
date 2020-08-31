@@ -14,6 +14,7 @@
 query {
   metadata {
     siteName
+    siteUrl
   }
 }
 </static-query>
@@ -43,6 +44,7 @@ query Tag ($id: ID!) {
 <script>
 // import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'
+import SEO from "~/lib/seo.js";
 
 export default {
   components: {
@@ -50,11 +52,24 @@ export default {
     PostCard
   },
   metaInfo() {
-    return this.$seo({
-      title: `${this.$page.tag.title} - ${this.$static.metadata.siteName}`,
-      siteName : this.$static.metadata.siteName,
-      keywords: this.$page.tag.title
-    })
+    const type = 'website';
+    const title = `${this.$page.tag.title} 태그 글 목록 - ${this.$static.metadata.siteName}`;
+    const siteName = this.$static.metadata.siteName;
+    const description = title;
+    const keywords = this.$page.tag.title;
+    return {
+      title: title,
+      siteName : siteName,
+      description: description,
+      keywords: keywords,
+      meta: SEO(
+        type
+      , `${this.$static.metadata.siteUrl}/tag/${this.$page.tag.title}`
+      , siteName
+      , title
+      , description
+      , keywords)
+    }
   },
 }
 </script>

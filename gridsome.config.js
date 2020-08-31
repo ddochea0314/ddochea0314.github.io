@@ -28,11 +28,7 @@ module.exports = {
           }
         }
       }
-    },
-    {
-      use: 'gridsome-plugin-seo'
-    }
-  ],
+    }],
   transformers: {
     //Add markdown support to all file-system sources
     remark: {

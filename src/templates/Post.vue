@@ -33,6 +33,7 @@
 query {
   metadata {
     siteName
+    siteUrl
   }
 }
 </static-query>
@@ -40,6 +41,7 @@ query {
 <page-query>
 query Post ($id: ID!) {
   post: post (id: $id) {
+    id
     title
     date (format: "YYYY. MM. DD")
     timeToRead
@@ -59,6 +61,7 @@ query Post ($id: ID!) {
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
+import SEO from "~/lib/seo.js";
 // import Author from '~/components/Author.vue'
 
 export default {
@@ -68,12 +71,24 @@ export default {
     PostTags
   },
   metaInfo() {
-    return this.$seo({
-      title: this.$page.post.title,
-      siteName : this.$static.metadata.siteName,
-      description: this.$page.post.description,
-      keywords: this.$page.post.tags.map(t => t.title).join(",")
-    })
+    const type = 'article';
+    const title = this.$page.post.title;
+    const siteName = this.$static.metadata.siteName;
+    const description = this.$page.post.description;
+    const keywords = this.$page.post.tags.map(t => t.title).join(",");
+    return {
+      title: title,
+      siteName : siteName,
+      description: description,
+      keywords: keywords,
+      meta: SEO(
+        type
+      , `${this.$static.metadata.siteUrl}${this.$page.post.path}`
+      , siteName
+      , title
+      , description
+      , keywords)
+    }
   },
   mounted() {
     const script = window.document.createElement("script");
