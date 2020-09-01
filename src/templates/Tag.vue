@@ -57,6 +57,7 @@ export default {
     const siteName = this.$static.metadata.siteName;
     const description = title;
     const keywords = this.$page.tag.title;
+    const url = `${this.$static.metadata.siteUrl}/tag/${this.$page.tag.title}`;
     return {
       title: title,
       siteName : siteName,
@@ -64,11 +65,14 @@ export default {
       keywords: keywords,
       meta: SEO(
         type
-      , `${this.$static.metadata.siteUrl}/tag/${this.$page.tag.title}`
+      , url
       , siteName
       , title
       , description
-      , keywords)
+      , keywords),
+      link: [
+        {rel : "canonical", href: url}
+      ]
     }
   },
 }

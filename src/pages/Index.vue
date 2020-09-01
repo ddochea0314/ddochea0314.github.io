@@ -59,16 +59,20 @@ export default {
     const title = 'Home';
     const siteName = this.$static.metadata.siteName;
     const description = this.$static.metadata.siteDescription;
+    const url = this.$static.metadata.siteUrl;
     return {
       title: title,
       siteName : siteName,
       description : description,
       meta: SEO(
         type
-      , this.$static.metadata.siteUrl
+      , url
       , siteName
       , title
-      , description)
+      , description),
+      link: [
+        {rel : "canonical", href: url}
+      ]
     }
   }
 }

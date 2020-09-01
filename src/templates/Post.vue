@@ -76,6 +76,7 @@ export default {
     const siteName = this.$static.metadata.siteName;
     const description = this.$page.post.description;
     const keywords = this.$page.post.tags.map(t => t.title).join(",");
+    const url = `${this.$static.metadata.siteUrl}${this.$page.post.path}`;
     return {
       title: title,
       siteName : siteName,
@@ -83,11 +84,14 @@ export default {
       keywords: keywords,
       meta: SEO(
         type
-      , `${this.$static.metadata.siteUrl}${this.$page.post.path}`
+      , url
       , siteName
       , title
       , description
-      , keywords)
+      , keywords),
+      link: [
+        {rel : "canonical", href: url}
+      ]
     }
   },
   mounted() {
