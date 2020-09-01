@@ -7,7 +7,7 @@ published: true
 tags: ['Gridsome', 'Vuejs', 'Github', 'Github Pages', 'utterances']
 series: false
 canonical_url: false
-description: "이제 댓글을 달 수 있습니다. utterances 덕분에 말이죠~ 👍"
+description: "Gridsome 기반의 블로그에서 utterances를 설정하는 경험을 공유합니다."
 ---
 
 이제 댓글을 달 수 있습니다. utterances 덕분에 말이죠~ 👍

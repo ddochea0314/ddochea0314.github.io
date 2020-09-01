@@ -5,14 +5,14 @@ export default(siteType, siteUrl, siteName, title, description, keywords) => {
   }];
   if(siteType) {
     meta.push({
-      name : "og:type",
+      // name : "og:type",
       property: "og:type",
       content: siteType
     });
   }
   if(siteUrl) {
     meta.push({
-      name : "og:url",
+      // name : "og:url",
       property: "og:url",
       content: siteUrl
     },
@@ -24,11 +24,11 @@ export default(siteType, siteUrl, siteName, title, description, keywords) => {
   if(siteName) {
     meta.push({
       name : "site_name",
-      property: "site_name",
+      // property: "site_name",
       content : siteName
     },
     {
-      name : "og:site_name",
+      // name : "og:site_name",
       property: "og:site_name",
       content : siteName
     },
@@ -39,14 +39,14 @@ export default(siteType, siteUrl, siteName, title, description, keywords) => {
   }
   if(title) {
     meta.push({
-      name : "og:title",
+      // name : "og:title",
       property: "og:title",
       content: title
     })
   }
   if(description) {
     meta.push({
-      name : "og:description",
+      // name : "og:description",
       property: "og:description",
       content: description
     },
@@ -57,19 +57,20 @@ export default(siteType, siteUrl, siteName, title, description, keywords) => {
   }
   if(keywords) {
     meta.push({
-      name : "og:keywords",
+      // name : "og:keywords",
       property: "og:keywords",
       content: keywords
     },
     {
       name : "keywords",
-      property: "keywords",
+      // property: "keywords",
       content: keywords
     })
   }
   return meta.sort((a, b) => {
-    var nameA = a.name.toUpperCase(); // ignore upper and lowercase
-    var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+    
+    var nameA = a.name? a.name.toUpperCase() : a.property.toUpperCase(); // ignore upper and lowercase
+    var nameB = b.name? b.name.toUpperCase() : b.property.toUpperCase(); // ignore upper and lowercase
     if (nameA < nameB) {
       return -1;
     }
