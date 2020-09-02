@@ -59,9 +59,7 @@ export default {
     const keywords = this.$page.tag.title;
     const url = `${this.$static.metadata.siteUrl}/tag/${this.$page.tag.title}`;
     const link = [];
-    if(this.$page.post.canonical_url) {
-      link.push({rel : "canonical", href: url})
-    }
+    link.push({rel : "canonical", href: url})
     return {
       title: title,
       siteName : siteName,
