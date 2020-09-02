@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: '또치의 삽질 보관함 v2.0',
-  siteDescription: '개발자의 시간과 삽질을 연성하여 뻘짓을 만드는 놀라움을 선보이는 곳.',
+  siteDescription: 'C#과 .NET으로 먹고사는 개발자가 다른거 하고싶어서 Vuejs, Docker, DB 등등 마음가는대로 이것저것 익혀본 걸 끄적이는 블로그입니다.',
   siteUrl: 'https://ddochea0314.github.io',
   pathPremfix: '/',
   // titleTemplate: '%s', // https://gridsome.org/docs/config/#titletemplate

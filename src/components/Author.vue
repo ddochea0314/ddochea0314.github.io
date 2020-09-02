@@ -8,7 +8,7 @@
 		</h1>
 
 		<p class="author__intro">
-			{{ $static.metadata.siteDescription }}
+			개발자의 시간과 삽질을 연성하여 뻘짓을 만드는 놀라움을 선보이는 곳.
 		</p>
 
 		<p class="author__links">
@@ -22,8 +22,7 @@
 <static-query>
 query {
   metadata {
-    siteName,
-	siteDescription
+    siteName
   }
 }
 </static-query>

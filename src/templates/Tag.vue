@@ -58,6 +58,10 @@ export default {
     const description = title;
     const keywords = this.$page.tag.title;
     const url = `${this.$static.metadata.siteUrl}/tag/${this.$page.tag.title}`;
+    const link = [];
+    if(this.$page.post.canonical_url) {
+      link.push({rel : "canonical", href: url})
+    }
     return {
       title: title,
       siteName : siteName,
@@ -70,9 +74,7 @@ export default {
       , title
       , description
       , keywords),
-      link: [
-        {rel : "canonical", href: url}
-      ]
+      link: link
     }
   },
 }

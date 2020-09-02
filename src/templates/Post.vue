@@ -46,6 +46,7 @@ query Post ($id: ID!) {
     date (format: "YYYY. MM. DD")
     timeToRead
     path
+    canonical_url
     tags {
       id
       title
@@ -77,6 +78,10 @@ export default {
     const description = this.$page.post.description;
     const keywords = this.$page.post.tags.map(t => t.title).join(",");
     const url = `${this.$static.metadata.siteUrl}${this.$page.post.path}`;
+    const link = [];
+    if(this.$page.post.canonical_url) {
+      link.push({rel : "canonical", href: url})
+    }
     return {
       title: title,
       siteName : siteName,
@@ -89,9 +94,7 @@ export default {
       , title
       , description
       , keywords),
-      link: [
-        {rel : "canonical", href: url}
-      ]
+      link: link
     }
   },
   mounted() {

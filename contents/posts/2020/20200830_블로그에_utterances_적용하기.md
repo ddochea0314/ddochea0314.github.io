@@ -6,7 +6,7 @@ date: 2020-08-30
 published: true
 tags: ['Gridsome', 'Vuejs', 'Github', 'Github Pages', 'utterances']
 series: false
-canonical_url: false
+canonical_url: true
 description: "Gridsome 기반의 블로그에서 utterances를 설정하는 경험을 공유합니다."
 ---
 
