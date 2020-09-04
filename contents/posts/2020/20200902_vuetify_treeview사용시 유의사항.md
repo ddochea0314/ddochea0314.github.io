@@ -4,7 +4,7 @@ category: Vuejs
 id: 3
 date: 2020-09-02
 published: true
-tags: ['Vuejs', 'Vuetify', 'Treeview', 'css', 'scss' ]
+tags: ['Vuejs', 'Vuetify', 'Treeview', 'css', 'scss','개발경험']
 series: false
 canonical_url: true
 description: "css의 flex, grid로 만든 Layout에 적용할때 안되던 삽질을 까먹지 않고자 작성한 글입니다."

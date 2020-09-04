@@ -56,7 +56,7 @@ export default {
   },
   metaInfo() {
     const type = 'website';
-    const title = 'Home';
+    const title = '메인화면';
     const siteName = this.$static.metadata.siteName;
     const description = this.$static.metadata.siteDescription;
     const url = this.$static.metadata.siteUrl;
@@ -68,7 +68,7 @@ export default {
         type
       , url
       , siteName
-      , title
+      , siteName
       , description),
       link: [
         {rel : "canonical", href: url}
