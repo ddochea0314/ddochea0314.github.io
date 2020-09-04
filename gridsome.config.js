@@ -30,6 +30,12 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'G-H18NPRYEGP',
+      },
+    },
+    {
       use: '@gridsome/plugin-sitemap',
       options: {
         cacheTime: 600000, // default
