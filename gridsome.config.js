@@ -28,7 +28,14 @@ module.exports = {
           }
         }
       }
-    }],
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+      }
+    }
+  ],
   transformers: {
     //Add markdown support to all file-system sources
     remark: {
