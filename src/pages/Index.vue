@@ -56,7 +56,7 @@ export default {
   },
   metaInfo() {
     const type = 'website';
-    const title = '메인화면';
+    const title = 'Main';
     const siteName = this.$static.metadata.siteName;
     const description = this.$static.metadata.siteDescription;
     const url = this.$static.metadata.siteUrl;
