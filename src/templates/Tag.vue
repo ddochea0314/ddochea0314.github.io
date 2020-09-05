@@ -53,8 +53,8 @@ export default {
   },
   metaInfo() {
     const type = 'website';
-    const title = `'${this.$page.tag.title}' 태그 글 목록 - ${this.$static.metadata.siteName}`;
     const siteName = this.$static.metadata.siteName;
+    const title = `'${this.$page.tag.title}' 태그 글 목록`;
     const description = title;
     const keywords = this.$page.tag.title;
     const url = `${this.$static.metadata.siteUrl}/tag/${this.$page.tag.title}`;
