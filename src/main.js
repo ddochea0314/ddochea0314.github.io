@@ -23,5 +23,10 @@ export default function (Vue, { router, head, isClient }) {
   {
     property: "by",
     content: "ddochea"
-  })
+  });
+  head.script.push({
+    async: true,
+    src : "https://www.googletagmanager.com/gtag/js?id=G-88XT3XP863"
+  }
+  )
 }
