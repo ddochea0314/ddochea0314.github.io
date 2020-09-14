@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: '또치의 삽질 보관함 v2.0',
-  siteDescription: '연봉은 책임질 순 없어도, 시간은 책임질 수 있는 개발 경험을 정리한 블로그',
+  // siteDescription: '연봉은 책임질 순 없어도, 시간은 책임질 수 있는 개발 경험을 정리한 블로그', // 페이지 전체에 description 를 해당문자열로 다 적용시킴. 따라서 주석처리
   siteUrl: 'https://ddochea0314.github.io',
   pathPremfix: '/',
   // titleTemplate: '%s', // https://gridsome.org/docs/config/#titletemplate

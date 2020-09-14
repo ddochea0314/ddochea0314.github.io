@@ -15,7 +15,6 @@
 query {
   metadata {
     siteName
-    siteDescription
     siteUrl
   }
 }
@@ -58,7 +57,7 @@ export default {
     const type = 'website';
     const title = 'Main';
     const siteName = this.$static.metadata.siteName;
-    const description = this.$static.metadata.siteDescription;
+    const description = '연봉은 책임질 순 없어도, 시간은 책임질 수 있는 개발 경험을 정리한 블로그';
     const url = this.$static.metadata.siteUrl;
     return {
       title: title,

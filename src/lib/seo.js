@@ -46,6 +46,10 @@ export default(siteType, siteUrl, siteName, title, description, keywords) => {
   }
   if(description) {
     meta.push({
+      name : "description",
+      content: description
+    },
+    {
       // name : "og:description",
       property: "og:description",
       content: description
