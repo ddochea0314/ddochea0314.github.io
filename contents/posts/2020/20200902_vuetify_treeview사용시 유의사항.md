@@ -1,6 +1,5 @@
 ---
 title: Vuetify Treeview를 대시보드 형식의 Layout에 사용하려 할때 겪었던 문제 🖖
-category: Vuejs
 id: 3
 date: 2020-09-02
 published: true

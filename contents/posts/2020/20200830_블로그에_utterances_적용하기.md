@@ -1,6 +1,5 @@
 ---
 title: 블로그에 utterances 적용하기 🔮
-category: Bloglog
 id: 2
 date: 2020-08-30
 published: true
