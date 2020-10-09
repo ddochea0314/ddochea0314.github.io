@@ -2,17 +2,24 @@ export default(siteType, siteUrl, siteName, title, description, keywords) => {
   const meta = [{
     name : "twitter:card",
     content: "summary_large_image"
-  }];
+  },
+  {
+    name : "og:image",
+    content: "~/assets/images/author.png"
+  },
+  {
+    name : "twitter:image",
+    content: "~/assets/images/author.png"
+  },
+];
   if(siteType) {
     meta.push({
-      // name : "og:type",
       property: "og:type",
       content: siteType
     });
   }
   if(siteUrl) {
     meta.push({
-      // name : "og:url",
       property: "og:url",
       content: siteUrl
     },

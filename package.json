@@ -1,5 +1,6 @@
 {
   "name": "ddochea0314.github.io",
+  "description": "ddochea0314.github.io 블로그 소스",
   "private": true,
   "scripts": {
     "build": "gridsome build",
