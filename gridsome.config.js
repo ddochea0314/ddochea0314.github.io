@@ -34,6 +34,27 @@ module.exports = {
       options: {
         cacheTime: 600000, // default
       }
+    },
+    {
+      use: 'gridsome-plugin-rss',
+      options: {
+        contentTypeName: 'Post',
+        feedOptions: {
+          title: '또치의 삽질 보관함 v2.0',
+          feed_url: 'https://ddochea0314.github.io/rss.xml',
+          site_url: 'https://ddochea0314.github.io'
+        },
+        feedItemOptions: node => ({
+          title: node.title,
+          description: node.description,
+          url: 'https://ddochea0314.github.io/' + node.id,
+          author: "ddochea0314"
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml'
+        }
+      }
     }
   ],
   transformers: {
@@ -47,4 +68,4 @@ module.exports = {
       ]
     }
   }
-}
+} 
