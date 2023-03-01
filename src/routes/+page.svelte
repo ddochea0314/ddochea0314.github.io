@@ -3,19 +3,17 @@
 
 	export let data: { posts: Post[] }; // +page.ts load 함수 결과값
 </script>
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
 <ul>
 	{#each data.posts as item}
-		<li>
-			<a href={item.path}>
-				<div>
-					<h1>{item.title}</h1>
-					<p>{item.date}</p>
+		<li class="card m-4 bg-primary text-primary-content">
+			<div class="card-body">
+				<h2 class="card-title">{item.title}</h2>
+				<p>{item.date}</p>
+				<p>{item.tag}</p>
+				<div class="card-actions justify-end">
+				  <a class="btn" href="{item.path}">더보기</a>
 				</div>
-			</a>
+			  </div>
 		</li>
 	{/each}
 </ul>
