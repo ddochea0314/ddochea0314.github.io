@@ -8,7 +8,7 @@ export const GET: RequestHandler = async () => {
 	const allPosts = await Promise.all(
 		iterables.map(async ([path, resolver]: any) => {
 			const { metadata } = await resolver();
-			const postPath = path.slice(11, -3);
+			const postPath = path.replace('/src/routes/posts/docs/', 'posts/').replace('.md', '');
 			return {
 				...metadata,
 				path: postPath
