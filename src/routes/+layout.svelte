@@ -1,7 +1,9 @@
 <script lang="ts">
 	import '../app.css';
 
-	let isOpen = false;
+	const year = new Date().getFullYear();
+	let el: HTMLElement | null = null;
+	let y = 0;
 </script>
 
 <svelte:head>
@@ -9,10 +11,10 @@
 </svelte:head>
 <div class="drawer">
 	<input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
-	<div class="drawer-content flex flex-col">
+	<div bind:this={el} on:scroll={() => (y = el?.scrollTop ?? 0)} class="drawer-content">
 		<!-- Navbar -->
-		<div class="w-full navbar">
-			<div class="flex-none lg:hidden">
+		<div class="navbar sticky bg-base-100 drop-shadow-x1 top-0 z-50 ">
+			<div class="navbar-start">
 				<label for="my-drawer-3" class="btn btn-square btn-ghost">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -28,14 +30,10 @@
 					>
 				</label>
 			</div>
-			<div class="flex-1 px-2 mx-2">
-				<a href="/">Home</a>
+			<div class="navbar-center">
+				<a class="btn btn-ghost normal-case text-xl" href="/">Home {y}</a>
 			</div>
-			<div class="flex-none hidden lg:block">
-				<ul class="menu menu-horizontal">
-					<!-- Navbar menu content here -->
-				</ul>
-			</div>
+			<div class="navbar-end" />
 		</div>
 		<!-- Page content here -->
 		<div class="container mx-auto">
@@ -44,8 +42,9 @@
 	</div>
 	<div class="drawer-side">
 		<label for="my-drawer-3" class="drawer-overlay" />
-		<ul class="menu p-4 w-80 bg-base-100">
+		<ul class="menu p-4 w-80 bg-base-100 ">
 			<!-- Sidebar content here -->
+			side
 		</ul>
 	</div>
 </div>

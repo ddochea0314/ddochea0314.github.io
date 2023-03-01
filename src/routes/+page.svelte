@@ -8,11 +8,11 @@
 	{#each data.posts as post}
 		<li class="card m-4 bg-primary text-primary-content">
 			<div class="card-body">
-				<h2 class="card-title">{post.title}</h2>
+				<a href={post.path}><h2 class="card-title">{post.title}</h2></a>
 				<p>{post.date}</p>
 				<p>
 					{#each post.tag as tag}
-						<span class="badge badge-warning gap-2">{tag}</span>
+						<span class="badge badge-warning p-4 m-1 gap-2">{tag}</span>
 					{/each}
 				</p>
 				<div class="card-actions justify-end">
