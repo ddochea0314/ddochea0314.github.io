@@ -1,10 +1,34 @@
 <script lang="ts">
+	// @ts-nocheck
 	import type { Post } from '$lib';
 
 	export let data: { posts: Post[] }; // +page.ts load 함수 결과값
+
+	let scrollY = 0;
+	let hero: HTMLElement;
+	$: {
+		if (hero) {
+			const heroContent = hero.querySelector('.hero-content');
+			if (heroContent && scrollY < hero.offsetHeight) {
+				heroContent.style.transform = `translateY(${scrollY * 0.5}px)`;
+			}
+			if (heroContent && scrollY < hero.offsetHeight) {
+				heroContent.style.opacity = `${1 - scrollY / hero.offsetHeight}`;
+			}
+		}
+	}
 </script>
 
-<ul>
+<svelte:window bind:scrollY />
+<div bind:this={hero} class="hero h-96 bg-base-100 ">
+	<div class="hero-content text-center">
+		<div class="max-w-md">
+			<h1 class="text-5xl">Hello</h1>
+			<p class="text-xl">This is a test page</p>
+		</div>
+	</div>
+</div>
+<ul class="container mx-auto">
 	{#each data.posts as post}
 		<li class="card m-4 bg-primary text-primary-content">
 			<div class="card-body">
