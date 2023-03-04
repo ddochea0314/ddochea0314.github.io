@@ -1,15 +1,16 @@
 //@ts-nocheck
 import { error, type PageLoad } from '@sveltejs/kit';
 
-export const load: PageLoad = async ({ params }) => {
+export const load: PageLoad<Post> = async ({ params }) => {
 	try {
 		const post = await import(`../docs/${params.slug}.md`);
-		const { title, date } = post.metadata;
+		const { title, date, description } = post.metadata;
 		const content = post.default;
 
 		return {
 			content,
 			title,
+			description,
 			date
 		};
 	} catch (e) {

@@ -2,7 +2,8 @@
 	import { NavbarType } from '$lib';
 
 	export const type = NavbarType.Home;
-	export const title = '또치의 삽질보관함';
+	export let title = '또치의 손수만든 삽질 보관함';
+	export let description = '10년 넘는 시간 동안 여전히 인생뻘짓을 기록하는 놀라운 새끼의 삽질 이력';
 
 	let scrollY = 0;
 	let hero: HTMLElement;
@@ -21,9 +22,12 @@
 	}
 </script>
 
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
 <svelte:window bind:scrollY />
 <div>
-	<nav bind:this={nav} class="navbar duration-500 flex fixed top-0 z-50">
+	<nav bind:this={nav} class="navbar font-bold duration-300 flex fixed top-0 z-50 drop-shadow">
 		<div class="navbar-start">
 			<div class="dropdown">
 				<!-- svelte-ignore a11y-label-has-associated-control -->
@@ -57,13 +61,17 @@
 		<div class="navbar-end" />
 	</nav>
 	<div bind:this={hero} class="hero h-96 mb-2">
+		<!-- <div class="hero-overlay bg-opacity-60" /> -->
 		<div class="hero-content text-center">
-			<div>
-				<h1 class="text-2xl">
+			<div class="container">
+				<h1 class="text-2xl font-bold">
 					<p>{title}</p>
 				</h1>
-				<p>{hero?.offsetHeight}</p>
+				<p class="mt-4">{description}</p>
 			</div>
 		</div>
 	</div>
 </div>
+
+<style>
+</style>
