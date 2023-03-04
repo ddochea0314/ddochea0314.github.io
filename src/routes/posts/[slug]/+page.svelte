@@ -1,7 +1,7 @@
 <script>
 	// @ts-nocheck
 
-	import Navbar from '$lib/navbar.svelte';
+	import Navbar from '$lib/components/navbar.svelte';
 	export let data;
 </script>
 
@@ -10,10 +10,14 @@
 </svelte:head>
 <Navbar {...data} />
 
-<section class="container mx-auto">
-	<article>
-		<h1>{data.title}</h1>
-		<p>Published: {data.date}</p>
-		<svelte:component this={data.content} />
-	</article>
-</section>
+<article class="container mx-auto">
+	<h1>{data.title}</h1>
+	<p>Published: {data.date}</p>
+	<svelte:component this={data.content} />
+</article>
+
+<style>
+	article {
+		min-height: 70vh;
+	}
+</style>

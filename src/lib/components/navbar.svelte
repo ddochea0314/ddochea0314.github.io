@@ -2,8 +2,10 @@
 	import { NavbarType } from '$lib';
 
 	export const type = NavbarType.Home;
-	export let title = '또치의 손수만든 삽질 보관함';
-	export let description = '10년 넘는 시간 동안 여전히 인생뻘짓을 기록하는 놀라운 새끼의 삽질 이력';
+
+	export let title = '또치의 손수 만든 삽질 보관함';
+	export let description =
+		'10년 넘게 개발하고도 여전히 인생 뻘짓을 기록하는 놀라운 새끼의 삽질 이력';
 
 	let scrollY = 0;
 	let hero: HTMLElement;
@@ -32,7 +34,7 @@
 			<div class="dropdown">
 				<!-- svelte-ignore a11y-label-has-associated-control -->
 				<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-				<label tabindex="0" class="btn btn-ghost btn-circle">
+				<label tabindex="0" class="btn btn-ghost btn-circle bg-base-100">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-5 w-5"
@@ -64,14 +66,11 @@
 		<!-- <div class="hero-overlay bg-opacity-60" /> -->
 		<div class="hero-content text-center">
 			<div class="container">
-				<h1 class="text-2xl font-bold">
+				<header class="text-3xl font-bold">
 					<p>{title}</p>
-				</h1>
-				<p class="mt-4">{description}</p>
+				</header>
+				<p class="mt-4 line-clamp-2">{description}</p>
 			</div>
 		</div>
 	</div>
 </div>
-
-<style>
-</style>

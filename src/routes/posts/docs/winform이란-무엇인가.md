@@ -1,8 +1,7 @@
 ---
 title: 'Winform이란 무엇인가? asdasdasdasdasdasasdasd'
 date: '2023-03-26'
-description: 'Winform(Windows Form)은 Microsoft에서 제공하는 GUI(Graphical User Interface) 애플리케이션 개발 환경이다. Winform 애플리케이션은 윈도우 기반의 데스크톱 애플리케이션을 만드는 데 사용된다. Winform은 .NET Framework 클래스 라이브러리의 System.Windows.Forms 네임스페이스에 정의되어 있으며, 이 네임스페이스에는 Winform에서 사용하는 수많은 컨트롤, 컨테이너, 레이아웃 매니저 등이 포함되어 있다.
-Winform(Windows Form)은 Microsoft에서 제공하는 GUI(Graphical User Interface) 애플리케이션 개발 환경이다. Winform 애플리케이션은 윈도우 기반의 데스크톱 애플리케이션을 만드는 데 사용된다. Winform은 .NET Framework 클래스 라이브러리의 System.Windows.Forms 네임스페이스에 정의되어 있으며, 이 네임스페이스에는 Winform에서 사용하는 수많은 컨트롤, 컨테이너, 레이아웃 매니저 등이 포함되어 있다.'
+description: 'Winform(Windows Form)은 Microsoft에서 제공하는 GUI(Graphical User Interface) 애플리케이션 개발 환경이다. Winform 애플리케이션은 윈도우 기반의 데스크톱 애플리케이션을 만드는 데 사용된다. Winform은 .NET Framework 클래스 라이브러리의 System.Windows.Forms 네임스페이스에 정의되어 있으며, 이 네임스페이스에는 Winform에서 사용하는 수많은 컨트롤, 컨테이너, 레이아웃 매니저 등이 포함되어 있다.'
 tag:
   - 'new'
   - 'hello'
