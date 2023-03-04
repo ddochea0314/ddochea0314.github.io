@@ -6,8 +6,8 @@ interface Post {
 }
 
 enum NavbarType {
-	Home = "Home",
-	Post = "Post",
+	Home = 'Home',
+	Post = 'Post'
 }
 export type { Post };
-export { NavbarType }
+export { NavbarType };

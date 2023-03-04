@@ -1,11 +1,10 @@
 <script lang="ts">
 	// @ts-nocheck
 	import type { Post } from '$lib';
-	import Navbar from '$lib/navbar.svelte';
 
 	export let data: { posts: Post[] }; // +page.ts load 함수 결과값
 </script>
-<Navbar />
+
 <div class="container pl-2 pr-2 grid gap-4 grid-cols-1 lg:grid-cols-2 ">
 	{#each data.posts as post}
 		<section class="card bg-primary text-primary-content">
