@@ -52,8 +52,8 @@
 				<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 				<ul tabindex="0" class="menu dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-64">
 					<li><a href="/">Homepage</a></li>
-					<li><a href="/">Portfolio</a></li>
-					<li><a href="/">About</a></li>
+					<li><a href="/portfolio">Portfolio</a></li>
+					<li><a href="/about">About</a></li>
 				</ul>
 			</div>
 		</div>
