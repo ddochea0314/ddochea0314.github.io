@@ -34,7 +34,10 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^2.0.1",
+		"@tailwindcss/typography": "^0.5.9",
 		"daisyui": "^2.51.2",
-		"mdsvex": "^0.10.6"
+		"mdsvex": "^0.10.6",
+		"rehype-autolink-headings": "^6.1.1",
+		"rehype-slug": "^5.1.0"
 	}
 }
