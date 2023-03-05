@@ -7,11 +7,11 @@
 </script>
 
 <Navbar />
-<div class="container grid gap-2 p-2 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+<main class="container grid gap-2 p-2 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
 	{#each data.posts as post}
 		<article class="card bg-base-300 h-96">
 			<div class="card-body">
-				<h2 class="card-title text-2xl">
+				<h2 class="card-title text-xl">
 					<a href={post.path} class="truncate">{post.title}</a>
 				</h2>
 				<p class="card-subtitle">
@@ -25,4 +25,4 @@
 			</div>
 		</article>
 	{/each}
-</div>
+</main>

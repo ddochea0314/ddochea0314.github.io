@@ -62,12 +62,12 @@
 		</div>
 		<div class="navbar-end" />
 	</nav>
-	<div bind:this={hero} class="hero h-96 mb-2">
+	<div bind:this={hero} class="hero h-80 mb-2 ">
 		<!-- <div class="hero-overlay bg-opacity-60" /> -->
 		<div class="hero-content text-center">
 			<div class="container">
-				<header class="text-3xl font-bold">
-					<p>{title}</p>
+				<header class="text-2xl font-bold">
+					<p class="line-clamp-4">{title}</p>
 				</header>
 				<p class="mt-4 line-clamp-2">{description}</p>
 			</div>
