@@ -10,13 +10,13 @@
 >
 	<div class="grid grid-flow-col gap-4">
 		<a href="/" class="link link-hover">Home</a>
-		<a href="/about" class="link link-hover">About</a>
 		<a href="/portfolio" class="link link-hover">Portfolio</a>
+		<a href="/about" class="link link-hover">About</a>
 	</div>
 	<div>
 		<div class="grid grid-flow-col gap-4">
 			<a href="https://github.com/ddochea0314"
-				><img src="/images/github-mark-white.png" alt="github logo" width="24" /></a
+				><img src="/images/github-mark-white.png" alt="github logo" width="24" height="24" /></a
 			>
 		</div>
 	</div>

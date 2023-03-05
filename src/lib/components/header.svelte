@@ -3,7 +3,8 @@
 
 	export const type = NavbarType.Home;
 
-	export let title = '또치의 손수 만든 삽질 보관함';
+	const constTitle = '또치의 손수 만든 삽질 보관함';
+	export let title = constTitle;
 	export let description =
 		'10년 넘게 개발하고도 여전히 인생 뻘짓을 기록하는 놀라운 새끼의 삽질 이력';
 
@@ -25,10 +26,10 @@
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{title === constTitle? constTitle : `${title} :: ${constTitle}`}</title>
 </svelte:head>
 <svelte:window bind:scrollY />
-<div>
+<header>
 	<nav bind:this={nav} class="navbar font-bold duration-300 flex fixed top-0 z-50 drop-shadow">
 		<div class="navbar-start">
 			<div class="dropdown">
@@ -62,15 +63,15 @@
 		</div>
 		<div class="navbar-end" />
 	</nav>
-	<div bind:this={hero} class="hero h-80 mb-2 ">
+	<div bind:this={hero} class="hero h-80">
 		<!-- <div class="hero-overlay bg-opacity-60" /> -->
 		<div class="hero-content text-center">
 			<div class="container">
 				<header class="text-2xl font-bold">
 					<p class="line-clamp-4">{title}</p>
 				</header>
-				<p class="mt-4 line-clamp-2">{description}</p>
+				<p class="mt-4 line-clamp-2 lg:line-clamp-3">{description}</p>
 			</div>
 		</div>
 	</div>
-</div>
+</header>
