@@ -26,7 +26,7 @@
 </script>
 
 <svelte:head>
-	<title>{title === constTitle? constTitle : `${title} :: ${constTitle}`}</title>
+	<title>{title === constTitle ? constTitle : `${title} :: ${constTitle}`}</title>
 </svelte:head>
 <svelte:window bind:scrollY />
 <header>

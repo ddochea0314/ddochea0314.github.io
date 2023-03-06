@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte';
 	import '../app.css';
 
 	const year = new Date(Date.now()).getFullYear();
@@ -16,7 +17,7 @@
 	<div>
 		<div class="grid grid-flow-col gap-4">
 			<a href="https://github.com/ddochea0314"
-				><img src="/images/github-mark-white.png" alt="github logo" width="24" height="24" /></a
+				><Icon icon="octicon:mark-github-16" width="24" height="24" /></a
 			>
 		</div>
 	</div>
