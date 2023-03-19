@@ -25,7 +25,6 @@ JWT는 일반적으로 세 부분으로 구성됩니다. 첫 번째는 헤더(He
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
 
-
 ## JWT 사용시 얻을 수 있는 이점
 1. 분산 시스템에서 사용 가능: JWT는 토큰 자체에 사용자 인증 정보를 포함하고 있기 때문에 인증 서버의 의존성을 줄일 수 있습니다. 따라서 JWT는 분산 시스템에서 사용하기에 적합합니다.
 
@@ -35,7 +34,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
 
 4. 보안성: JWT는 기본적으로 서명되어 있기 때문에 변조를 방지할 수 있습니다. 또한 JWT는 인증과 관련된 중요한 정보만을 포함하므로 보안성이 높습니다.
 
-## JWT 단점:
+## JWT 단점
 1. 토큰 크기: JWT는 인증 정보를 포함하기 때문에 토큰 크기가 상대적으로 큽니다. 따라서 JWT를 자주 전송하는 경우 네트워크 대역폭 문제가 발생할 수 있습니다.
 
 2. 토큰 만료 시간: JWT는 토큰 자체에 만료 시간을 설정하기 때문에 만료 시간이 지난 토큰은 더 이상 유효하지 않습니다. 이 경우 새로운 토큰을 발급해야 합니다. 만료 시간이 너무 짧게 설정되면 자주 새로운 토큰을 발급해야 하는 불편함이 있습니다. 반면 만료 시간이 너무 길게 설정되면 보안상의 위험이 있습니다.
