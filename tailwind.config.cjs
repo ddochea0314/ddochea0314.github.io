@@ -11,7 +11,15 @@ module.exports = {
 		container: {
 			center: true
 		},
-		extend: {}
+		extend: {
+			typography: {
+				DEFAULT: {
+					css: {
+						// maxWidth: '80ch', // add required value here
+					}
+				}
+			}
+		},
 	},
 	plugins: [
 		require('@tailwindcss/typography'),

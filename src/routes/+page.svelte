@@ -11,16 +11,18 @@
 	{#each data.posts as post}
 		<article class="card bg-base-300 h-96">
 			<div class="card-body">
-				<h2 class="card-title text-xl">
+				<h2 class="card-title text-md">
 					<a href={post.path} class="truncate">{post.title}</a>
 				</h2>
+				<span class="text-sm">{post.date}</span>
 				<p class="card-subtitle">
-					<span>{post.date}</span>
-					<span class="line-clamp-4 text-ellipsis overflow-hidden">{post.description ?? ''}</span>
+					<span class="text-md line-clamp-4 text-ellipsis overflow-hidden">
+						<a href={post.path}>{post.description ?? ''}</a>
+					</span>
 				</p>
 				<div class="card-actions">
 					{#each post.tag as tag}
-						<span class="badge badge-warning badge-lg">{tag}</span>
+						<span class="badge badge-warning badge-lg text-sm">{tag}</span>
 					{/each}
 				</div>
 			</div>

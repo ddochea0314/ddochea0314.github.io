@@ -24,13 +24,12 @@
 		}
 	}
 </script>
-
 <svelte:head>
 	<title>{title === constTitle ? constTitle : `${title} :: ${constTitle}`}</title>
 </svelte:head>
 <svelte:window bind:scrollY />
 <header>
-	<nav bind:this={nav} class="navbar font-bold duration-300 flex fixed top-0 z-50 drop-shadow">
+	<nav bind:this={nav} class="navbar duration-300 flex fixed top-0 z-50 drop-shadow">
 		<div class="navbar-start">
 			<div class="dropdown">
 				<!-- svelte-ignore a11y-label-has-associated-control -->
@@ -59,18 +58,18 @@
 			</div>
 		</div>
 		<div bind:this={navTitle} class="navbar-center duration-500 hidden">
-			<h1 class="text-lg">{title}</h1>
+			<h1 class="md:text-sm">{title}</h1>
 		</div>
 		<div class="navbar-end" />
 	</nav>
-	<div bind:this={hero} class="hero h-80">
+	<div bind:this={hero} class="hero h-60">
 		<!-- <div class="hero-overlay bg-opacity-60" /> -->
-		<div class="hero-content text-center">
+		<div class="hero-content text-center mt-4">
 			<div class="container">
-				<header class="text-2xl font-bold">
+				<header class="text-xl font-bold">
 					<p class="line-clamp-4">{title}</p>
 				</header>
-				<p class="mt-4 line-clamp-2 lg:line-clamp-3">{description}</p>
+				<p class="mt-4 line-clamp-3 lg:line-clamp-4">{description}</p>
 			</div>
 		</div>
 	</div>
