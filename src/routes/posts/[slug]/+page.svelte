@@ -8,7 +8,7 @@
 <Header title={`${data.title}`} description={data.description} />
 <main class="container p-2">
 	<article class="mx-auto prose">
-		<p>Published: {data.date}</p>
 		<svelte:component this={data.content} />
+		<span>Published: {data.date}</span> 
 	</article>
 </main>

@@ -19,16 +19,27 @@ JWT는 일반적으로 사용자 인증 및 인가에 사용됩니다. 클라이
 
 ## JWT의 구조
 
-JWT는 일반적으로 세 부분으로 구성됩니다. 첫 번째는 헤더(Header)입니다. 헤더는 토큰의 타입과 알고리즘 등을 지정합니다. 두 번째는 페이로드(Payload)입니다. 페이로드는 클라이언트 정보와 같은 사용자 지정 데이터가 포함됩니다. 마지막으로 서명(Signature)이 포함됩니다. 서명은 토큰의 유효성 검사를 위해 사용됩니다.
+JWT는 다음과 같은 구조를 가집니다.
+> 해당 토큰은 jwt.io에서 확인할 수 있습니다. [https://jwt.io/#debugger-io](https://jwt.io/#debugger-io)
 
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
 
+JWT는 일반적으로 세 부분으로 구성됩니다. 첫 번째는 헤더(Header)입니다. 헤더는 토큰의 타입과 알고리즘 등을 지정합니다. 두 번째는 페이로드(Payload)입니다. 페이로드는 클라이언트 정보와 같은 사용자 지정 데이터가 포함됩니다. 마지막으로 서명(Signature)이 포함됩니다. 서명은 토큰의 유효성 검사를 위해 사용됩니다.
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9 -- 헤더
+. -- 구분자
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ -- 페이로드
+. -- 구분자
+SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c -- 서명
+```
+
 ## JWT 사용시 얻을 수 있는 이점
 1. 분산 시스템에서 사용 가능: JWT는 토큰 자체에 사용자 인증 정보를 포함하고 있기 때문에 인증 서버의 의존성을 줄일 수 있습니다. 따라서 JWT는 분산 시스템에서 사용하기에 적합합니다.
 
-2. 손쉬운 구현: JWT는 자가수용성(self-contained)으로 토큰에 필요한 모든 정보를 포함하고 있기 때문에 서버에서 별도의 인증 상태 저장소를 유지할 필요가 없습니다.
+2. 손쉬운 구현: JWT는 [자가수용성(self-contained)](자가수용성의-개념)으로 토큰에 필요한 모든 정보를 포함하고 있기 때문에 서버에서 별도의 인증 상태 저장소를 유지할 필요가 없습니다.
 
 3. 확장성: JWT를 사용하면 다른 인증 시스템과 통합하기가 쉬우며, OAuth와 같은 기존의 인증 시스템과 함께 사용할 수 있습니다.
 

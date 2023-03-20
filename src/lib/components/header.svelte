@@ -58,7 +58,7 @@
 			</div>
 		</div>
 		<div bind:this={navTitle} class="navbar-center duration-500 hidden">
-			<h1 class="md:text-sm">{title}</h1>
+			<h1 class="text-md">{title}</h1>
 		</div>
 		<div class="navbar-end" />
 	</nav>

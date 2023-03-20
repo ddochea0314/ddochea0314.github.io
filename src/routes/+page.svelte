@@ -22,7 +22,7 @@
 				</p>
 				<div class="card-actions">
 					{#each post.tag as tag}
-						<span class="badge badge-warning badge-lg text-sm">{tag}</span>
+						<span class="badge badge-warning badge-md text-sm">{tag}</span>
 					{/each}
 				</div>
 			</div>
