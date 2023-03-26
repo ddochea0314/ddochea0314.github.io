@@ -16,9 +16,7 @@
 	</div>
 	<div>
 		<div class="grid grid-flow-col gap-4">
-			<a href="https://github.com/ddochea0314"
-				><Icon icon="octicon:mark-github-16" width="24" height="24" /></a
-			>
+			<a href="https://github.com/ddochea0314" aria-label="move to ddochea0314's github page"><Icon icon="octicon:mark-github-16" width="24" height="24" /></a>
 		</div>
 	</div>
 	<div>

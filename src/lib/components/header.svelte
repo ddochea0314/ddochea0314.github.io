@@ -26,6 +26,8 @@
 
 </script>
 <svelte:head>
+	<meta name="title" content={getTitle()} />
+	<meta name="description" content={description} />
 	<meta property="og:title" content={getTitle()} />
 	<meta property="og:description" content={description} />
 	<title>{getTitle()}</title>
