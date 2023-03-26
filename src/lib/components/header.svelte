@@ -5,8 +5,7 @@
 
 	const constTitle = '또치의 손수 만든 삽질 보관함';
 	export let title = constTitle;
-	export let description =
-		'10년 넘게 개발하고도 여전히 인생 뻘짓을 기록하는 놀라운 새끼의 삽질 이력';
+	export let description = '10년 넘게 개발하고도 여전히 인생 뻘짓을 기록하는 놀라운 새끼의 삽질 이력';
 
 	let scrollY = 0;
 	let hero: HTMLElement;
@@ -23,9 +22,13 @@
 			}
 		}
 	}
+	const getTitle = () => title === constTitle ? constTitle : `${title} :: ${constTitle}`;
+
 </script>
 <svelte:head>
-	<title>{title === constTitle ? constTitle : `${title} :: ${constTitle}`}</title>
+	<meta property="og:title" content={getTitle()} />
+	<meta property="og:description" content={description} />
+	<title>{getTitle()}</title>
 </svelte:head>
 <svelte:window bind:scrollY />
 <header>
