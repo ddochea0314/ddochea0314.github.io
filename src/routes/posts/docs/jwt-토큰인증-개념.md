@@ -63,4 +63,4 @@ OAuth는 클라이언트가 사용자의 리소스에 접근하는 권한을 부
 JWT를 OAuth의 인증 및 권한 부여 프로세스에서 사용하면, 클라이언트는 JWT를 요청 헤더에 포함시켜 보내고, 서버는 이를 검증하여 권한 부여를 수행합니다. 이 방식으로 JWT를 사용하면 OAuth 프로토콜에서 인증 및 권한 부여를 안전하고 효율적으로 수행할 수 있습니다.
 
 ## 참고자료
-[https://jwt.io/introduction/](https://jwt.io/introduction/)
+* [https://jwt.io/introduction/](https://jwt.io/introduction/)
