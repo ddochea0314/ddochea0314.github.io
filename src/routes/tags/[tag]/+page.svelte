@@ -2,6 +2,7 @@
 	// @ts-nocheck
 	import type { Post } from '$lib';
 	import Header from '$lib/components/header.svelte';
+	import PostCard from '$lib/components/postCard.svelte';
 
 	export let data: { posts: Post[] }; // +page.ts load 함수 결과값
 </script>
@@ -9,23 +10,6 @@
 <Header />
 <main class="container grid gap-2 p-2 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
 	{#each data.posts as post}
-		<article class="card bg-base-300 h-96">
-			<div class="card-body">
-				<h2 class="card-title text-md">
-					<a href={`/${post.path}`} class="truncate">{post.title}</a>
-				</h2>
-				<span class="text-sm">{post.date}</span>
-				<p class="card-subtitle">
-					<span class="text-md line-clamp-4 text-ellipsis overflow-hidden">
-						<a href={`/${post.path}`}>{post.description ?? ''}</a>
-					</span>
-				</p>
-				<div class="card-actions">
-					{#each post.tag as tag}
-                        <a class="badge badge-warning badge-md text-sm" href={`/tags/${tag}`} aria-label={`move to tag ${tag} collection`}>{tag}</a>
-					{/each}
-				</div>
-			</div>
-		</article>
+		<PostCard post={post} />
 	{/each}
 </main>

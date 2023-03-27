@@ -1,7 +1,7 @@
 interface Post {
 	title: string;
 	date: string;
-	discription: string;
+	description: string;
 	tag: Array<string>;
 	path: string;
 }
