@@ -17,7 +17,7 @@ export const GET: RequestHandler = async ({ params }) => {
 	);
 
 	return json(
-		allPosts.filter(p => p.tag.includes(params['tag'] ?? '')).sort((a, b) => {
+		allPosts.filter(p => p.tags.includes(params['tag'] ?? '')).sort((a, b) => {
 			return new Date(b.date).valueOf() - new Date(a.date).valueOf();
 		})
 	);

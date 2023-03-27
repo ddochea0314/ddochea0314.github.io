@@ -2,7 +2,7 @@ interface Post {
 	title: string;
 	date: string;
 	description: string;
-	tag: Array<string>;
+	tags: Array<string>;
 	path: string;
 }
 

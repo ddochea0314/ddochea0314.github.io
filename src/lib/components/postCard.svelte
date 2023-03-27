@@ -14,7 +14,7 @@
             </span>
         </p>
         <div class="card-actions">
-            {#each post.tag as tag}
+            {#each post.tags as tag}
                 <a class="badge badge-warning badge-md text-sm" href={`/tags/${tag}`} aria-label={`move to tag ${tag} collection`}>{tag}</a>
             {/each}
         </div>

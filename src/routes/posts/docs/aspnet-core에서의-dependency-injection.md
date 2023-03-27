@@ -2,7 +2,7 @@
 title: 'ASP.NET Core에서의 Dependency Injection'
 date: '2023-03-26 01:00'
 description: 'ASP.NET Core에서의 Dependency injection (의존성 주입)은 애플리케이션의 객체 간 종속성 관리를 단순화하고 테스트 용이성을 개선하기 위한 기술입니다.'
-tag:
+tags:
   - 'Dependency Injection'
   - 'DI'
   - 'Inversion of Control'
