@@ -7,12 +7,8 @@ tags:
   - 'DI'
   - 'Inversion of Control'
   - 'IoC'
-  - 'Dependency'
-  - 'Injection'
   - '의존성 주입'
   - '제어의 역전'
-  - '의존성'
-  - '주입'
   - 'ASP.NET Core'
 ---
 
@@ -28,26 +24,32 @@ DI는 ASP.NET Core 애플리케이션에서 매우 중요한 역할을 합니다
 
 ASP.NET Core에서는 서비스 등록을 위해 다음과 같은 방법을 제공합니다.
 
- - AddSingleton
- - AddScoped
- - AddTransient
+- AddSingleton
+- AddScoped
+- AddTransient
 
 이 세가지 요소를 ASP.NET Core에서 서비스의 생명주기(lifecycle)라고 부릅니다. 서비스의 생명주기는 서비스가 생성되고 해제되는 방식을 의미합니다.
 
-### AddSingleton 
+### AddSingleton
+
 애플리케이션 전체에서 단일 인스턴스를 사용해야 하는 서비스에 사용됩니다. 즉, 애플리케이션에서 한 번만 인스턴스를 만들고 모든 요청에 대해 동일한 인스턴스를 반환합니다.
+
 ```csharp
 services.AddSingleton<IMyService, MyService>();
 ```
 
-### AddScoped 
+### AddScoped
+
 요청 처리 동안 한 번만 인스턴스를 만들어야 하는 서비스에 사용됩니다. 요청이 끝나면 인스턴스가 해제됩니다.
+
 ```csharp
 services.AddScoped<IMyService, MyService>();
 ```
 
-### AddTransient 
+### AddTransient
+
 매번 새로운 인스턴스를 만들어야 하는 서비스에 사용됩니다.
+
 ```csharp
 services.AddTransient<IMyService, MyService>();
 ```
@@ -58,24 +60,24 @@ IMyService는 인터페이스이며 MyService는 IMyService를 구현한 클래�
 
 메소드 사용 위치는 .NET 6.0 기준 Program.cs 파일의 builder 객체의 Services 프로퍼티를 통해 등록할 수 있습니다.
 
-
 ## 서비스 요청
 
 서비스를 요청하기 위해서는 DI 컨테이너를 주입받아야 합니다. ASP.NET Core에서는 DI 컨테이너를 주입받기 위해 다음과 같은 방법을 제공합니다.
 
-### 생성자 주입 
+### 생성자 주입
+
 생성자를 통해 DI 컨테이너를 주입받습니다. 생성자 주입은 클래스의 생성자에서 DI 컨테이너를 주입받아 필요한 서비스를 가져와 클래스의 멤버 변수로 할당하는 방식입니다.
 
 ```csharp
 public class MyController : ControllerBase
 {
     private readonly MyClass _myClass;
-    
+
     public MyController(MyClass myClass)
     {
         _myClass = myClass;
     }
-    
+
     [HttpGet]
     public IActionResult Get()
     {
@@ -85,7 +87,9 @@ public class MyController : ControllerBase
 }
 
 ```
-### 속성 주입 
+
+### 속성 주입
+
 ASP.NET Core에서 DI 컨테이너를 주입받는 또 다른 방법은 속성 주입입니다. 속성 주입은 생성자 주입과 달리, 클래스의 생성자에서 의존성을 주입받지 않고, 클래스의 멤버 변수로서 DI 컨테이너에서 직접 필요한 서비스를 가져와 할당하는 방식입니다.
 
 다음은 속성 주입을 사용하는 예시입니다.
@@ -95,7 +99,7 @@ public class MyController : ControllerBase
 {
     [FromServices]
     public IMyService MyService { get; set; }
-    
+
     [HttpGet]
     public IActionResult Get()
     {
@@ -104,24 +108,27 @@ public class MyController : ControllerBase
     }
 }
 ```
+
 위의 예시에서 MyController 클래스는 IMyService 인터페이스를 사용합니다. MyController 클래스의 멤버 변수인 MyService 속성은 [FromServices] 특성을 사용하여 DI 컨테이너에서 IMyService 인터페이스의 구현체를 가져오도록 설정합니다.
 
 이제 Get() 메서드에서 MyService 속성을 사용하여 IMyService 인터페이스의 메서드를 호출할 수 있습니다. 속성 주입은 생성자 주입보다 간결하고 편리하지만, DI 컨테이너에서 직접 가져오기 때문에 사용하지 않는 서비스도 주입받을 수 있으므로 주의가 필요합니다.
 
 ### 메서드 주입
+
 메서드 주입은 생성자 주입과 속성 주입과 달리, 클래스의 생성자나 멤버 변수에서 의존성을 주입받지 않고, 메서드의 매개변수로서 DI 컨테이너에서 직접 필요한 서비스를 가져와 할당하는 방식입니다.
 
 다음은 메서드 주입을 사용하는 예시입니다.
+
 ```csharp
 public class MyController : ControllerBase
 {
     private readonly IMyService _myService;
-    
+
     public MyController(IMyService myService)
     {
         _myService = myService;
     }
-    
+
     [HttpGet]
     public IActionResult Get([FromServices] ILogger<MyController> logger)
     {
@@ -141,4 +148,4 @@ public class MyController : ControllerBase
 
 ## 참고
 
-* [Dependency injection in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0)
+- [Dependency injection in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0)

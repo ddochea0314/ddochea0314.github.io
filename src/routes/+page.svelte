@@ -10,6 +10,6 @@
 <Header />
 <main class="container grid gap-2 p-2 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
 	{#each data.posts as post}
-		<PostCard post={post} />
+		<PostCard {post} />
 	{/each}
 </main>

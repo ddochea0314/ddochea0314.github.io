@@ -7,12 +7,8 @@ tags:
   - 'DI'
   - 'Inversion of Control'
   - 'IoC'
-  - 'Dependency'
-  - 'Injection'
   - '의존성 주입'
   - '제어의 역전'
-  - '의존성'
-  - '주입'
   - '.NET'
 ---
 
@@ -51,7 +47,7 @@ public class MyDependency
 }
 ```
 
-위 코드에서 MyClass는 생성자에서 MyDependency를 직접 생성하여 _myDependency 필드에 저장합니다. 이제 DoSomething 메소드에서 _myDependency 객체의 메소드를 호출합니다. 이 경우, MyClass는 MyDependency 객체에 강하게 의존합니다. 따라서 MyDependency 객체가 변경되면 MyClass도 변경되어야 합니다.
+위 코드에서 MyClass는 생성자에서 MyDependency를 직접 생성하여 \_myDependency 필드에 저장합니다. 이제 DoSomething 메소드에서 \_myDependency 객체의 메소드를 호출합니다. 이 경우, MyClass는 MyDependency 객체에 강하게 의존합니다. 따라서 MyDependency 객체가 변경되면 MyClass도 변경되어야 합니다.
 
 하지만, Dependency Injection을 사용하면 MyClass에서 MyDependency 객체를 생성하지 않고, 외부에서 주입받아 사용할 수 있습니다.
 
@@ -95,9 +91,9 @@ public class Program
 }
 ```
 
-위 코드에서 MyClass는 생성자에서 IMyDependency 인터페이스를 주입받아 _myDependency 필드에 저장합니다. 이제 DoSomething 메소드에서 _myDependency 객체의 메소드를 호출합니다. 이 경우, MyClass는 IMyDependency 인터페이스에만 의존하므로 의존성이 더 낮아졌습니다.
+위 코드에서 MyClass는 생성자에서 IMyDependency 인터페이스를 주입받아 \_myDependency 필드에 저장합니다. 이제 DoSomething 메소드에서 \_myDependency 객체의 메소드를 호출합니다. 이 경우, MyClass는 IMyDependency 인터페이스에만 의존하므로 의존성이 더 낮아졌습니다.
 
-> .NET 에선 Microsoft.Extensions.DependencyInjection 패키지를 제공합니다. 이 패키지는 .NET Core에 기본으로 포함되어 있으며, `ASP.NET Core`, `Worker`,  `.NET MAUI` 등 현대화된 프로젝트 템플릿에서 기본적으로 사용합니다. 따라서 실제 구현시 해당 패키지를 사용하여 의존성 주입하는 것을 추천합니다. 예시 코드에선 이해를 돕기 위해 직접 대입하는 방식으로 구현했습니다.
+> .NET 에선 Microsoft.Extensions.DependencyInjection 패키지를 제공합니다. 이 패키지는 .NET Core에 기본으로 포함되어 있으며, `ASP.NET Core`, `Worker`, `.NET MAUI` 등 현대화된 프로젝트 템플릿에서 기본적으로 사용합니다. 따라서 실제 구현시 해당 패키지를 사용하여 의존성 주입하는 것을 추천합니다. 예시 코드에선 이해를 돕기 위해 직접 대입하는 방식으로 구현했습니다.
 
 ## Dependency Injection의 장점
 
@@ -125,7 +121,7 @@ public void MyClass_DoSomething_Should_Call_MyDependency_DoSomething()
 }
 ```
 
-DI 가 아닌 경우, 테스트 코드에서는 실제 객체를 생성해야 합니다. 이 경우 테스트 코드에서 실제 객체에 영향을 주게 되며, 객체가 데이터베이스 또는 외부 API에 의존하는 경우 외부 요소에 의해 테스트가 실패할 수 있습니다. 
+DI 가 아닌 경우, 테스트 코드에서는 실제 객체를 생성해야 합니다. 이 경우 테스트 코드에서 실제 객체에 영향을 주게 되며, 객체가 데이터베이스 또는 외부 API에 의존하는 경우 외부 요소에 의해 테스트가 실패할 수 있습니다.
 
 ```csharp
 [Test]
