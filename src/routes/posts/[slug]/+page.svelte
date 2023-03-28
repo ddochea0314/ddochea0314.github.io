@@ -2,10 +2,12 @@
 	// @ts-nocheck
 
 	import Header from '$lib/components/header.svelte';
+	import Nav from '$lib/components/nav.svelte';
 	export let data;
 </script>
 
 <Header title={`${data.title}`} description={data.description} tags={data.tags} />
+<Nav />
 <main class="container">
 	<section class="bg-base-100 rounded-box p-4 md:m-16 m-1">
 		<article class="prose mx-auto pt-12 pb-12">

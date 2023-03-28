@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Nav from '$lib/components/nav.svelte';
 	import Icon from '@iconify/svelte';
 	import '../app.css';
 
@@ -7,7 +6,6 @@
 </script>
 
 <slot />
-<Nav />
 <footer class="footer footer-center p-10 mt-2 text-base-content rounded relative bottom-0">
 	<div class="grid grid-flow-col gap-4">
 		<a href="/" class="link link-hover">Home</a>
