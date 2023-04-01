@@ -1,6 +1,6 @@
 ---
 title: 'Dependency Injection 이란?'
-date: '2023-03-26 00:00'
+date: '2023-03-26 00:00:00'
 description: 'Dependency Injection 이란, 의존성 주입이라고도 불리며, 제어의 역전이라고도 불립니다. 이는 객체지향 프로그래밍에서 객체 간의 의존성을 줄이기 위해 사용되는 패턴입니다'
 tags:
   - 'Dependency Injection'

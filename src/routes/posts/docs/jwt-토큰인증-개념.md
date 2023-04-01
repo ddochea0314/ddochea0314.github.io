@@ -1,6 +1,6 @@
 ---
 title: 'JWT(JSON Web Token)란 무엇인가?'
-date: '2023-03-18 00:00'
+date: '2023-03-18 00:00:00'
 description: 'JWT(JSON Web Token)는 웹 표준으로 지정된 JSON 기반의 데이터 포맷입니다. JWT는 보안적으로 안전한 방식으로 정보를 전달하기 위해 사용됩니다. JWT는 JSON 데이터를 기반으로 하며, 기본적으로 암호화되지 않은 상태로 HTTP 요청 헤더나 URL 매개변수를 통해 전송됩니다.'
 tags:
   - 'JWT'
