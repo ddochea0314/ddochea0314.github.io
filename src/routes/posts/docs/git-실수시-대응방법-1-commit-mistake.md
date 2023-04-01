@@ -39,7 +39,7 @@ Date:   Sat Apr 1 11:53:30 2023 +0900
     add hello.txt
 ```
 
-## 파일 수정 후 commit 까지 수행
+## 잘못된 작업 후 commit 까지 수행
 
 실수로 `hello.txt` 파일을 잘못 수정한 채, 깃 commit을 하게 되었다고 가정하겠습니다.
 `hello.txt` 파일을 아무렇게나 수정하고 아래 명령어와 같이 커밋을 진행합니다.
@@ -50,6 +50,8 @@ git commit -m "실수로 수정한 hello.txt"
 ```
 
 git log 명령어를 보면 아래와 비슷한 결과가 나올 것 입니다.
+
+> 해당 로그는 어디까지나 필자의 PC 기준이므로 실제 로그와는 다를 수 있습니다.
 
 ```bash
 commit 4390672d0998c87dde3507a149d9bbad7867e1c4 (HEAD -> main)
