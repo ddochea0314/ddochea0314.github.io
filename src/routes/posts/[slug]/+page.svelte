@@ -6,7 +6,7 @@
 	export let data;
 </script>
 
-<Header title={`${data.title}`} description={data.description} tags={data.tags} />
+<Header title={`${data.title}`} description={data.description} tags={data.tags} type="article" />
 <Nav />
 <main class="container">
 	<section class="bg-base-100 rounded-box p-4 md:m-16 m-1">

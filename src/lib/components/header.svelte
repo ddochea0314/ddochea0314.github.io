@@ -3,7 +3,9 @@
 	export let title = constTitle;
 	export let description =
 		'10년 넘게 개발하고도 여전히 인생 뻘짓을 기록하는 놀라운 새끼의 삽질 이력';
-	export let tags: String[] = ['ddochea', '또치', '삽질', '개발'];
+	export let tags = ['ddochea', '또치', '삽질', '개발'];
+	export let type = 'website';
+	export let site_name = '또치의 손수 만든 삽질 보관함';
 
 	const getTitle = () => (title === constTitle ? constTitle : `${title} :: ${constTitle}`);
 </script>
@@ -13,7 +15,15 @@
 	<meta name="description" content={description} />
 	<meta property="og:title" content={getTitle()} />
 	<meta property="og:description" content={description} />
+	<meta property="og:type" content={type} />
+	<meta property="og:site_name" content={site_name} />
+	<meta property="og:url" content="https://ddochea0314.github.io" />
+	<meta property="og:image" content="https://ddochea0314.github.io/favicon.png" />
 	<meta name="keywords" content={tags.join(',')} />
+	{#if type==='website'}
+		<meta property="og:article:author" content="ddochea" />
+		<meta name="author" content="ddochea" />
+	{/if}
 	<title>{getTitle()}</title>
 </svelte:head>
 <header class="mb-8 pb-2">
