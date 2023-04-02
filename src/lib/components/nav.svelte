@@ -39,17 +39,17 @@
 		<ul class="menu menu-horizontal">
 			<li>
 				<a href="/" aria-label="home">
-					<Icon icon="tabler:home" width="24" height="24" />
+					<Icon icon="tabler:home" class="dark:text-white text-black" width="24" height="24" />
 				</a>
 			</li>
 			<li>
 				<a href="/portfolio" aria-label="portfolio">
-					<Icon icon="tabler:trophy" width="24" height="24" />
+					<Icon icon="tabler:trophy" class="dark:text-white text-black" width="24" height="24" />
 				</a>
 			</li>
 			<li>
 				<a href="/about" aria-label="about">
-					<Icon icon="tabler:info-circle" width="24" height="24" />
+					<Icon icon="tabler:info-circle" class="dark:text-white text-black" width="24" height="24" />
 				</a>
 			</li>
 		</ul>
