@@ -6,6 +6,7 @@
 	export let tags = ['ddochea', '또치', '삽질', '개발'];
 	export let type = 'website';
 	export let site_name = '또치의 손수 만든 삽질 보관함';
+	export let url = '';
 
 	const getTitle = () => (title === constTitle ? constTitle : `${title} :: ${constTitle}`);
 </script>
@@ -17,7 +18,7 @@
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content={type} />
 	<meta property="og:site_name" content={site_name} />
-	<meta property="og:url" content="https://ddochea0314.github.io" />
+	<meta property="og:url" content={url} />
 	<meta property="og:image" content="https://ddochea0314.github.io/favicon.png" />
 	<meta name="keywords" content={tags.join(',')} />
 	{#if type==='website'}
