@@ -7,7 +7,13 @@
 	export let data;
 </script>
 
-<Header title={`${data.title}`} description={data.description} tags={data.tags} type="article" url={$page.url} />
+<Header
+	title={`${data.title}`}
+	description={data.description}
+	tags={data.tags}
+	type="article"
+	url={$page.url}
+/>
 <Nav />
 <main class="container">
 	<section class="bg-base-100 rounded-box p-4 md:m-16 m-1">

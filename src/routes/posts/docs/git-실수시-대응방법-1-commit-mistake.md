@@ -1,8 +1,8 @@
 ---
-title : 'Git 실수 시 대응방법 - 1. 실수로 commit 까지만 한 상태일 때'
-date : '2023-04-01 12:47:00'
-description : 'Git 을 사용하다보면 실수로 commit을 잘못한 경우가 있습니다. 이번 포스팅에서는 Git 을 사용하다가 실수를 했을 때 대응방법에 대해 알아보겠습니다.'
-tags :
+title: 'Git 실수 시 대응방법 - 1. 실수로 commit 까지만 한 상태일 때'
+date: '2023-04-01 12:47:00'
+description: 'Git 을 사용하다보면 실수로 commit을 잘못한 경우가 있습니다. 이번 포스팅에서는 Git 을 사용하다가 실수를 했을 때 대응방법에 대해 알아보겠습니다.'
+tags:
   - 'git'
   - 'git 명령어'
   - 'git commit'
@@ -43,7 +43,7 @@ Date:   Sat Apr 1 11:53:30 2023 +0900
 
 실수로 `hello.txt` 파일을 잘못 수정한 채, 깃 commit을 하게 되었다고 가정하겠습니다.
 `hello.txt` 파일을 아무렇게나 수정하고 아래 명령어와 같이 커밋을 진행합니다.
-  
+
 ```bash
 git add .
 git commit -m "실수로 수정한 hello.txt"
@@ -101,7 +101,6 @@ git reset --hard 234874713a5798c4e42c63996f9db099efa8379c
 ```
 
 ![git reset --hard](/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-1_3.png)
-
 
 ```bash
 git add .

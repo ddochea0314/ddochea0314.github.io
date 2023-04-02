@@ -21,7 +21,7 @@
 	<meta property="og:url" content={url} />
 	<meta property="og:image" content="https://ddochea0314.github.io/favicon.png" />
 	<meta name="keywords" content={tags.join(',')} />
-	{#if type==='website'}
+	{#if type === 'website'}
 		<meta property="og:article:author" content="ddochea" />
 		<meta name="author" content="ddochea" />
 	{/if}
