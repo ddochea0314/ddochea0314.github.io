@@ -69,7 +69,7 @@ Date:   Sat Apr 1 11:53:30 2023 +0900
 
 vscode 에서 GitLens 라는 플러그인을 사용하고 있다면, 아래와 같이 커밋 그래프를 볼 수 있습니다.
 
-![commit graph (with vscode GitLens)](/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-1_1.png)
+![commit graph (with vscode GitLens)](/assets/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-1_1.png)
 
 commit 까지만 한 경우라면 `git reset` 명령어를 통해 되돌릴 수 있습니다. 현재 돌아가고 싶은 커밋의 ID가 `234874713a5798c4e42c63996f9db099efa8379c` 커밋이므로 아래와 같은 명령어를 입력합니다.
 
@@ -79,7 +79,7 @@ git reset --soft 234874713a5798c4e42c63996f9db099efa8379c
 
 git reset 명령어에서 --soft 옵션은 커밋을 되돌리지만, 파일의 수정 내용은 그대로 유지합니다. 따라서 파일 내용은 그대로인 채, 커밋이 되돌아간 것을 확인할 수 있습니다. `git status` 명령어를 통해 확인해보면 아래와 같은 결과가 나올 것 입니다.
 
-![git reset --soft](/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-1_2.png)
+![git reset --soft](/assets/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-1_2.png)
 
 ```bash
 git status
@@ -100,7 +100,7 @@ Changes to be committed:
 git reset --hard 234874713a5798c4e42c63996f9db099efa8379c
 ```
 
-![git reset --hard](/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-1_3.png)
+![git reset --hard](/assets/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-1_3.png)
 
 ```bash
 git add .
