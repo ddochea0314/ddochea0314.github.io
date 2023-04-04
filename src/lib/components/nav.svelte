@@ -49,7 +49,12 @@
 			</li>
 			<li>
 				<a href="/about" aria-label="about">
-					<Icon icon="tabler:info-circle" class="dark:text-white text-black" width="24" height="24" />
+					<Icon
+						icon="tabler:info-circle"
+						class="dark:text-white text-black"
+						width="24"
+						height="24"
+					/>
 				</a>
 			</li>
 		</ul>

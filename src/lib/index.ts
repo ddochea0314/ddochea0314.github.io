@@ -38,14 +38,16 @@ interface Post {
 // 	Post = 'Post'
 // }
 
-
 /**
  * 모든 블로그 포스트 메타데이터를 포함하는 객체 배열을 반환합니다.
  * @param {function} [filter] 포스트 조건에 대한 필터 배열함수입니다. 생략하면 모든 요소가 포함됩니다.
  * @param {object} [thisArg] 콜백 함수를 실행할 때 this로 사용할 객체입니다.
  * @returns {Promise<Post[]>} 모든 블로그 포스트의 메타데이터를 포함하는 객체 배열입니다.
  */
-async function getPosts(filter?: (value: Post, index: number, array: Post[]) => unknown, thisArg?: any) : Promise<Post[]> {
+async function getPosts(
+	filter?: (value: Post, index: number, array: Post[]) => unknown,
+	thisArg?: any
+): Promise<Post[]> {
 	const allPostFiles = import.meta.glob<Post>('/src/routes/posts/docs/*.md'); // vite 지원기능
 	const iterables = Object.entries(allPostFiles);
 
@@ -59,12 +61,12 @@ async function getPosts(filter?: (value: Post, index: number, array: Post[]) => 
 			};
 		})
 	)
-	.then((posts) => filter ? posts.filter(filter, thisArg) : posts)
-	.then((posts) => posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
+		.then((posts) => (filter ? posts.filter(filter, thisArg) : posts))
+		.then((posts) => posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
 }
 
 export type { Post };
-export { 
+export {
 	// NavbarType,
-	getPosts,
+	getPosts
 };

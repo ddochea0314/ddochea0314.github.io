@@ -1,18 +1,24 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { getPosts } from '$lib';
 
-export const GET: RequestHandler = async ({setHeaders}) => {
-    setHeaders({
-        'Content-Type': 'application/xml',
-        'Cache-Control': 'max-age=0, s-max-age=3600'
-    });
+// adapter-static build 오류 발생하여 추가
+export const prerender = true;
 
-    const website = 'https://ddochea0314.github.io';
+export const GET: RequestHandler = async ({ setHeaders }) => {
+	setHeaders({
+		'Content-Type': 'application/xml',
+		'Cache-Control': 'max-age=0, s-max-age=3600'
+	});
 
-    const posts = (await getPosts());
-    const tags = posts.map(p => p.tags).flat().filter((v, i, a) => a.indexOf(v) === i);
-    
-    const xml = `<?xml version="1.0" encoding="UTF-8" ?>
+	const website = 'https://ddochea0314.github.io';
+
+	const posts = await getPosts();
+	const tags = posts
+		.map((p) => p.tags)
+		.flat()
+		.filter((v, i, a) => a.indexOf(v) === i);
+
+	const xml = `<?xml version="1.0" encoding="UTF-8" ?>
     <urlset
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
@@ -29,31 +35,30 @@ export const GET: RequestHandler = async ({setHeaders}) => {
         <priority>1.0</priority>
       </url>
       ${posts
-        .map(
-          (post) => `<url>
+				.map(
+					(post) => `<url>
             <loc>${website}/${post.path}</loc>
             <lastmod
               >${
-                post.updated
-                  ? new Date(post.updated).toISOString()
-                  : new Date(post.date).toISOString()
-              }</lastmod
+								post.updated
+									? new Date(post.updated).toISOString()
+									: new Date(post.date).toISOString()
+							}</lastmod
             >
             <changefreq>monthly</changefreq>
             <priority>1.0</priority>
           </url>`
-        )
-        .join('')
-    }
-    ${
-        tags.map(
-            (tag) => `<url>
+				)
+				.join('')}
+    ${tags
+			.map(
+				(tag) => `<url>
                 <loc>${website}/tags/${tag}</loc>
                 <changefreq>monthly</changefreq>
                 <priority>0.8</priority>
             </url>`
-        ).join('')
-    }
-    </urlset>`
-    return new Response(xml);
+			)
+			.join('')}
+    </urlset>`;
+	return new Response(xml);
 };
