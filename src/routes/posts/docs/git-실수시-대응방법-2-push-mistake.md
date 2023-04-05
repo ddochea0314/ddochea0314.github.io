@@ -75,7 +75,7 @@ Date:   Sat Apr 1 11:53:30 2023 +0900
 
 잘못된 푸시를 했기 때문에, github에도 `hello.txt` 파일이 잘못 수정된 상태로 올라가 있습니다.
 
-![잘못 올라간 push](/assets/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-2_1.png)
+![잘못 올라간 push](/assets/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-2_1.webp)
 
 ## 해결방법
 
@@ -92,7 +92,7 @@ git push -f origin main
 
 해당 명령어를 수행하면 github에도 `hello.txt` 파일이 수정되기 이전의 상태로 롤백된 것을 확인할 수 있습니다.
 
-![잘못 올라간 push를 제거한 직후](/assets/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-2_2.png)
+![잘못 올라간 push를 제거한 직후](/assets/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-2_2.webp)
 
 이 경우 실수한 커밋 이력이 사라지게 되어 깔끔한 히스토리를 남길 수 있습니다. 그러나 협업 과정 중 다른 사람이 해당 커밋을 받아서 작업을 진행했다면, 해당 커밋을 받은 사람의 로컬 저장소에는 해당 커밋이 남아있기 때문에, 해당 커밋을 받은 사람의 로컬 저장소에서는 해당 커밋 이력이 남아있게 됩니다. 이 경우에는 해당 커밋을 받은 사람의 로컬 저장소에서도 `git reset` 명령어를 이용하여 해당 커밋을 되돌려야 합니다.
 
@@ -105,7 +105,7 @@ git revert 1345e1c262d5cd5be307332eddeb26e93ef18ae4
 git push origin main
 ```
 
-![잘못 올라간 push를 revert](/assets/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-2_3.png)
+![잘못 올라간 push를 revert](/assets/images/git-%EC%8B%A4%EC%88%98%EC%8B%9C-%EB%8C%80%EC%9D%91%EB%B0%A9%EB%B2%95-2_3.webp)
 
 `git revert` 명령어는 해당 커밋을 되돌리는 것이 아니라, 해당 커밋에 대한 작업사항을 취소하는 새로운 커밋을 만들어서 push를 진행합니다. 이 경우에는 해당 커밋 이력이 남아있기 때문에, 협업 과정 중 다른 사람이 해당 커밋을 받아서 작업을 진행했다해도 merge 시 실수를 수정하기위한 revert 커밋이 존재하기 때문에, 충돌에 의한 merge가 가능합니다.
 
