@@ -44,7 +44,7 @@
 			</li>
 			<li>
 				<a href="/portfolio" aria-label="portfolio">
-					<Icon icon="tabler:trophy" class="dark:text-white text-black" width="24" height="24" />
+					<Icon icon="tabler:book" class="dark:text-white text-black" width="24" height="24" />
 				</a>
 			</li>
 			<li>
