@@ -34,6 +34,10 @@ export const GET: RequestHandler = async ({ setHeaders }) => {
         <loc>${website}</loc>
         <priority>1.0</priority>
       </url>
+      <url>
+        <loc>${website}/ads.txt</loc>
+        <priority>0.8</priority>
+      </url>
       ${posts
 				.map(
 					(post) => `<url>
