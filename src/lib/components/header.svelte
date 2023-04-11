@@ -9,6 +9,45 @@
 	export let url = '';
 
 	const getTitle = () => (title === constTitle ? constTitle : `${title} :: ${constTitle}`);
+
+	let ldjson = {};
+	if (type == 'article') {
+		ldjson = {
+			'@context': 'http://schema.org',
+			'@type': 'Article',
+			headline: title,
+			description: description,
+			author: {
+				'@type': 'Person',
+				name: 'ddochea'
+			},
+			publisher: {
+				'@type': 'Organization',
+				name: 'ddochea',
+				logo: {
+					'@type': 'ImageObject',
+					url: 'https://ddochea0314.github.io/favicon.png'
+				}
+			},
+			mainEntityOfPage: {
+				'@type': 'WebPage',
+				'@id': url
+			},
+			image: 'https://ddochea0314.github.io/favicon.png'
+		};
+	} else {
+		ldjson = {
+			'@context': 'http://schema.org',
+			'@type': 'WebSite',
+			name: '또치의 손수 만든 삽질 보관함',
+			url: 'https://ddochea0314.github.io'
+			// 'potentialAction': {
+			// 	'@type': 'SearchAction',
+			// 	'target': 'https://ddochea0314.github.io/search?q={search_term_string}',
+			// 	'query-input': 'required name=search_term_string'
+			// } // 검색기능이 없으므로 주석처리
+		};
+	}
 </script>
 
 <svelte:head>

@@ -1,11 +1,23 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
+	import { onMount } from 'svelte';
 
 	let scrollY = 0;
 	let lastScroll = 0;
 	let isScrollUp = false;
 
 	let nav: HTMLElement;
+	let proseTitles: NodeListOf<HTMLElement>;
+
+	onMount(() => {
+		proseTitles = document.querySelectorAll(
+			'.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6'
+		);
+		proseTitles.forEach((title) => {
+			// title.classList.add('anchor');
+			// title.id = title.innerText;
+		});
+	});
 
 	$: {
 		if (nav && scrollY > 0) {
@@ -23,7 +35,6 @@
 			}
 		}
 	}
-
 	function onScroll() {
 		isScrollUp = scrollY < lastScroll;
 		lastScroll = scrollY;
@@ -31,9 +42,15 @@
 </script>
 
 <svelte:window on:scroll={onScroll} bind:scrollY />
+<ul class="">
+	{#if proseTitles}
+		{#each proseTitles as title}
+			<li><a href={`#${title.id}`}>{title.innerText}</a></li>
+		{/each}
+	{/if}
+</ul>
 <div
-	class="w-fit fixed bottom-10 left-0 right-0 z-50 mx-auto 
-	w-auto text-white text-center rounded-full shadow invisible duration-100"
+	class="w-fit fixed bottom-10 left-0 right-0 z-50 mx-auto text-white text-center rounded-full shadow invisible duration-100"
 >
 	<nav bind:this={nav} class="w-100 h-100 rounded-full duration-100 m-1">
 		<ul class="menu menu-horizontal">
@@ -43,8 +60,8 @@
 				</a>
 			</li>
 			<li>
-				<a href="/portfolio" aria-label="portfolio">
-					<Icon icon="tabler:book" class="dark:text-white text-black" width="24" height="24" />
+				<a href="#" aria-label="table of contents">
+					<Icon icon="tabler:menu-2" class="dark:text-white text-black" width="24" height="24" />
 				</a>
 			</li>
 			<li>
