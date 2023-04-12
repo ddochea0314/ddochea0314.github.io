@@ -5,7 +5,7 @@ import { mdsvex } from 'mdsvex';
 // Rehype plugins : https://github.com/rehypejs/rehype/blob/HEAD/doc/plugins.md#list-of-plugins
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { h } from 'hastscript';
+// import { h } from 'hastscript';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -29,12 +29,12 @@ const config = {
 							style: 'text-decoration:none',
 							ariaHidden: true,
 							tabIndex: -1
-						},
-						content(node) {
-							// behavior가 prepend, append일 때만 동작
-							return [h('span', { class: 'prose-title' }, '🔗')];
-							// return [s(node., { class: 'prose-title-link-icon' }, '🔗')]
 						}
+						// content(node) {
+						// behavior가 prepend, append일 때만 동작
+						// return [h('span', { class: 'prose-title' }, '🔗')];
+						// return [s(node., { class: 'prose-title-link-icon' }, '🔗')]
+						// }
 						// group(node) { // behavior가 before, after일 때만 동작
 						// 	console.log(node);
 						// 	return h('span', { class: 'relative' }, '🔗')
