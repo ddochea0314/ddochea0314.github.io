@@ -1,7 +1,7 @@
 ---
-title: 'SqlCommand로 프로시저 호출 시 the Size property has an invalid size of 0 오류시 해결방법'
+title: 'SqlCommand로 프로시저 호출 시 the Size property has an invalid size of 0 오류해결방법'
 date: '2023-04-20 22:34:00'
-description: 'SqlCommand로 프로시저 호출 시 the Size property has an invalid size of 0 오류가 발생한다면 확인해야할 사항을 알아봅니다.'
+description: 'Ado.NET에서 SqlCommand로 프로시저 호출 시 the Size property has an invalid size of 0 오류가 발생한다면 확인해야 할 사항을 알아봅니다.'
 tags:
   - '.NET'
   - 'ADO.NET'
@@ -12,6 +12,7 @@ tags:
   - 'MSSQL'
   - 'SqlCommand'
   - 'SqlClient'
+  - 'SqlParameter'
 ---
 
 요새 .NET에선 Dapper, EntityFramework 사용하기 때문에 해당 오류를 잘 볼일은 없습니다. 하지만, 레거시 코드를 오랫동안 운영중인 회사에선 여전히 ADO.NET 원형코드를 사용하고 있습니다.
