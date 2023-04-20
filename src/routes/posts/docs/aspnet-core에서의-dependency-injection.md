@@ -10,6 +10,7 @@ tags:
   - '의존성 주입'
   - '제어의 역전'
   - 'ASP.NET Core'
+  - 'CSharp'
 ---
 
 ## ASP.NET Core에서의 Dependency Injection

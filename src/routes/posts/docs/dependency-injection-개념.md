@@ -10,6 +10,7 @@ tags:
   - '의존성 주입'
   - '제어의 역전'
   - '.NET'
+  - 'CSharp'
 ---
 
 ## Dependency Injection 이란?

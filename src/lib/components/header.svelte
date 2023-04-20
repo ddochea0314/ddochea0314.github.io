@@ -26,14 +26,14 @@
 				name: 'ddochea',
 				logo: {
 					'@type': 'ImageObject',
-					url: 'https://ddochea0314.github.io/favicon.png'
+					url: 'https://ddochea0314.github.io/favicon.ico'
 				}
 			},
 			mainEntityOfPage: {
 				'@type': 'WebPage',
 				'@id': url
 			},
-			image: 'https://ddochea0314.github.io/favicon.png'
+			image: 'https://ddochea0314.github.io/favicon.ico'
 		};
 	} else {
 		ldjson = {
