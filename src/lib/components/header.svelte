@@ -1,14 +1,14 @@
 <script lang="ts">
-	const constTitle = '또치의 손수 만든 삽질 보관함';
-	export let title = constTitle;
+	const defaultTitle = '또치의 손수 만든 삽질 보관함';
+	export let title = defaultTitle;
 	export let description =
 		'10년 넘게 개발하고도 여전히 인생 뻘짓을 기록하는 놀라운 새끼의 삽질 이력';
 	export let tags = ['ddochea', '또치', '삽질', '개발'];
 	export let type = 'website';
-	export let site_name = '또치의 손수 만든 삽질 보관함';
+	export let siteName = '또치의 손수 만든 삽질 보관함';
 	export let url = '';
 
-	const getTitle = () => (title === constTitle ? constTitle : `${title} :: ${constTitle}`);
+	$: finalTitle = title == defaultTitle ? title : `${title} | ${defaultTitle}`;
 
 	let ldjson = {};
 	if (type == 'article') {
@@ -51,20 +51,22 @@
 </script>
 
 <svelte:head>
-	<meta name="title" content={getTitle()} />
+	<meta name="title" content={finalTitle} />
 	<meta name="description" content={description} />
-	<meta property="og:title" content={getTitle()} />
+	<meta property="og:title" content={finalTitle} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content={type} />
-	<meta property="og:site_name" content={site_name} />
+	<meta property="og:site_name" content={siteName} />
 	<meta property="og:url" content={url} />
 	<meta property="og:image" content="https://ddochea0314.github.io/favicon.png" />
 	<meta name="keywords" content={tags.join(',')} />
 	{#if type === 'website'}
-		<meta property="og:article:author" content="ddochea" />
 		<meta name="author" content="ddochea" />
+	{:else if type === 'article'}
+		<meta property="og:article:author" content="ddochea" />
+		<meta name="by" content="ddochea" />
 	{/if}
-	<title>{getTitle()}</title>
+	<title>{finalTitle}</title>
 </svelte:head>
 <header class="mb-8 pb-2">
 	<div class="hero h-60">
@@ -77,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-	{#if title !== constTitle}
+	{#if type === 'article'}
 		<div class="mb-4 mx-auto w-auto text-center">
 			{#each tags as tag}
 				<a
