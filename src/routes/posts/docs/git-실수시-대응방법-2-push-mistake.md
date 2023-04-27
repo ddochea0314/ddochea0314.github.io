@@ -1,11 +1,10 @@
 ---
 title: 'Git 실수 시 대응방법 - 2. 실수로 push 까지 한 상태일 때'
 date: '2023-04-01 17:18:00'
-description: 'Git 을 사용하다보면 실수로 push를 잘못한 경우가 있습니다. 이번 포스팅에서는 Git 을 사용하다가 실수를 했을 때 대응방법에 대해 알아보겠습니다.'
+description: '실수로 하지말아야할 push까지 저질렀다면? 이번 포스팅에서는 Git 을 사용하다가 실수로 소스코드를 push까지 했을 때 대응방법에 대해 알아보겠습니다.'
 tags:
   - 'git'
   - 'git 명령어'
-  - 'git commit'
   - 'git reset'
   - 'git branch'
   - 'git push'
@@ -84,6 +83,8 @@ Date:   Sat Apr 1 11:53:30 2023 +0900
 ### 1. reset 과 push -f 를 이용한 방법
 
 commit 실수 때와 마찬가지로, `git reset` 명령어를 이용하여 이전 커밋으로 되돌린 후, `git push -f` 명령어를 이용하여 강제로 push를 진행합니다.
+
+> git push -f 는 권한에 따라 수행이 불가능할 수 있습니다. 이 경우, 해당 저장소의 관리자에게 요청하여 진행해야 합니다.
 
 ```bash
 git reset --hard 234874713a5798c4e42c63996f9db099efa8379c

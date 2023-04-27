@@ -115,6 +115,6 @@ git push 작업 이전에 실수를 했을 때는 `git reset` 명령어를 통�
 
 그러나 push 이후에 실수를 했을 때는 어떨까요? 다음 포스팅에서 알아보겠습니다.
 
-## 참고
+## 참고자료
 
 - [git reset](https://git-scm.com/docs/git-reset)

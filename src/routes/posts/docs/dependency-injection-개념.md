@@ -147,7 +147,7 @@ Dependency Injection을 사용하면 다음과 같은 단점이 있습니다.
 - 코드가 복잡해질 수 있습니다.
 - 의존성이 많은 경우, 의존성을 관리하기 어려울 수 있습니다.
 
-## 참고
+## 참고자료
 
 - [Dependency Injection in .NET Worker](https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection)
 - [Dependency Injection in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0)

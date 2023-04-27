@@ -147,6 +147,6 @@ public class MyController : ControllerBase
 
 위 세 가지 종속성 주입 방법 중에서도 생성자 주입이 가장 많이 사용되며, 일반적으로 권장되는 방식입니다. 이유는 생성자 주입은 클래스의 의존성이 명확하게 드러나기 때문에 유지보수와 테스트가 쉽기 때문입니다. 하지만 특정 상황에 따라 속성 주입 또는 메서드 주입이 필요한 경우도 있을 수 있습니다.
 
-## 참고
+## 참고자료
 
 - [Dependency injection in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0)
