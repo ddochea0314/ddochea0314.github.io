@@ -18,7 +18,7 @@
 			{#each post.tags as tag}
 				<a
 					class="badge badge-warning badge-lg text-md"
-					href={`/tags/${tag}`}
+					href={`/tags/${encodeURIComponent(tag)}`}
 					aria-label={`move to tag ${tag} collection`}>{tag}</a
 				>
 			{/each}

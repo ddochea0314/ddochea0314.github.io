@@ -11,6 +11,7 @@ tags:
   - '제어의 역전'
   - 'ASP.NET Core'
   - 'CSharp'
+  - 'C#'
 ---
 
 ## ASP.NET Core에서의 Dependency Injection

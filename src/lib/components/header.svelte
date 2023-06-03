@@ -84,7 +84,7 @@
 			{#each tags as tag}
 				<a
 					class="badge badge-warning badge-lg text-sm m-0.5 mt-1 mb-1"
-					href={`/tags/${tag}`}
+					href={`/tags/${encodeURIComponent(tag)}`}
 					aria-label={`move to tag ${tag} collection`}>{tag}</a
 				>
 			{/each}
