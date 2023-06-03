@@ -49,7 +49,7 @@ export const GET: RequestHandler = async ({ setHeaders }) => {
 									: new Date(post.date).toISOString()
 							}</lastmod
             >
-            <changefreq>monthly</changefreq>
+            <changefreq>weekly</changefreq>
             <priority>1.0</priority>
           </url>`
 				)
@@ -58,7 +58,7 @@ export const GET: RequestHandler = async ({ setHeaders }) => {
 			.map(
 				(tag) => `<url>
                 <loc>${website}/tags/${tag}</loc>
-                <changefreq>monthly</changefreq>
+                <changefreq>weekly</changefreq>
                 <priority>0.8</priority>
             </url>`
 			)
