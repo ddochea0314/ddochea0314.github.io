@@ -13,7 +13,6 @@ tags:
   - 'SqlCommand'
   - 'SqlClient'
   - 'SqlParameter'
-  - 'C#'
 ---
 
 요새 .NET에선 Dapper, EntityFramework 사용하기 때문에 해당 오류를 잘 볼일은 없습니다. 하지만, 레거시 코드를 오랫동안 운영중인 회사에선 여전히 ADO.NET 원형코드를 사용하고 있습니다.
