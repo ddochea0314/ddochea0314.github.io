@@ -5,6 +5,7 @@ import { mdsvex } from 'mdsvex';
 // Rehype plugins : https://github.com/rehypejs/rehype/blob/HEAD/doc/plugins.md#list-of-plugins
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeWrapAll from 'rehype-wrap-all';
 // import { h } from 'hastscript';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -20,8 +21,7 @@ const config = {
 			extensions: ['.svx', '.md'],
 			rehypePlugins: [
 				[rehypeSlug],
-				[
-					rehypeAutolinkHeadings,
+				[rehypeAutolinkHeadings,
 					{
 						behavior: 'append',
 						properties: {
@@ -39,8 +39,11 @@ const config = {
 						// 	console.log(node);
 						// 	return h('span', { class: 'relative' }, '🔗')
 						// }
-					}
-				]
+					}],
+				[rehypeWrapAll, {
+					selector: 'table',
+					wrapper: 'div.overflow-x-auto'
+				}]
 			]
 		})
 	],

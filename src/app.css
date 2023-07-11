@@ -16,6 +16,9 @@
 	main {
 		min-height: 50vh;
 	}
+  overflow-x-auto {
+    @apply overflow-x-auto; /* .md에서만 사용할 때도 적용되도록 css파일에서 호출 처리 */
+  }
 }
 @tailwind components;
 @tailwind utilities;
