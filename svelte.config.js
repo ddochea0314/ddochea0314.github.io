@@ -14,9 +14,6 @@ const config = {
 	// for more information about preprocessors
 	extensions: ['.svelte', '.svx', '.md'],
 	preprocess: [
-		vitePreprocess({
-			preserve: ['ld+json']
-		}),
 		mdsvex({
 			extensions: ['.svx', '.md'],
 			rehypePlugins: [
@@ -45,6 +42,9 @@ const config = {
 					wrapper: 'div.overflow-x-auto'
 				}]
 			]
+		}),
+		vitePreprocess({
+			preserve: ['ld+json']
 		})
 	],
 
