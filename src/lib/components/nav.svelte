@@ -41,7 +41,7 @@
 	}
 
 	async function copyUrl() {
-		const url = `${$page.url.origin}/${$page.url.pathname}`;
+		const url = `${$page.url.origin}${$page.url.pathname}`;
 		await navigator.clipboard.writeText(url);
 		alert('URL 주소가 복사되었습니다.');
 	}
