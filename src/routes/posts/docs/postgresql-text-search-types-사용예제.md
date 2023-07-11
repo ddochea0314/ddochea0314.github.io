@@ -8,6 +8,7 @@ tags:
 - 'tsvector'
 - 'text-search-types'
 - 'database'
+- 'query'
 ---
 
 ## Like 조회의 한계
