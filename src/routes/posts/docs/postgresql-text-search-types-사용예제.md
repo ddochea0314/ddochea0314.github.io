@@ -4,11 +4,13 @@ date: '2023-07-11 11:00:00'
 description: 'Postgresql 에서 문자열을 빠르게 검색할 수 있는 기법 중 하나인 tsquery, tsvector 를 사용하는 방법을 알아봅니다.'
 tags:
 - 'postgresql'
+- 'postgres'
 - 'tsquery'
 - 'tsvector'
 - 'text-search-types'
 - 'database'
 - 'query'
+- '문자열검색'
 ---
 
 ## Like 조회의 한계
