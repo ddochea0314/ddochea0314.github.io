@@ -67,6 +67,7 @@
 		<meta name="by" content="ddochea" />
 	{/if}
 	<title>{finalTitle}</title>
+	{@html `<script type="application/ld+json">${JSON.stringify(ldjson)}</script>`}
 </svelte:head>
 <header class="mb-8 pb-2">
 	<div class="hero h-60">

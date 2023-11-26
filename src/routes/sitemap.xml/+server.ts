@@ -54,7 +54,7 @@ export const GET: RequestHandler = async ({ setHeaders }) => {
           </url>`
 				)
 				.join('')}
-    ${tags
+    ${/*tags
 			.map(
 				(tag) => `<url>
                 <loc>${website}/tags/${tag}</loc>
@@ -62,7 +62,7 @@ export const GET: RequestHandler = async ({ setHeaders }) => {
                 <priority>0.8</priority>
             </url>`
 			)
-			.join('')}
+      .join('')*/ ''}
     </urlset>`;
 	return new Response(xml);
 };
