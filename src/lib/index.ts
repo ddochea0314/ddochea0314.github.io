@@ -27,6 +27,24 @@ interface Post {
 	path: string;
 }
 
+export type SeriesPost = {
+    title: string;
+    date: string;
+    tags: string[];
+    content: any;
+    path?: string;
+    prev: {
+        link: string;
+        title: string;
+    };
+    next: {
+        link: string;
+        title: string;
+    };
+
+}
+
+
 // enum NavbarType {
 // 	/**
 // 	 * 홈 링크를 나타냅니다.
