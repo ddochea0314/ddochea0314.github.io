@@ -83,8 +83,30 @@ async function getPosts(
 		.then((posts) => posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
 }
 
+async function getSeriesHelloDotnetPosts(
+	filter?: (value: SeriesPost, index: number, array: SeriesPost[]) => unknown,
+	thisArg?: any
+): Promise<SeriesPost[]> {
+	const allPostFiles = import.meta.glob<SeriesPost>('/src/routes/series/hello-dotnet/docs/*.md'); // vite 지원기능
+	const iterables = Object.entries(allPostFiles);
+
+	return Promise.all<SeriesPost>(
+		iterables.map(async ([path, resolver]: any) => {
+			const { metadata } = await resolver();
+			const postPath = path.replace('/src/routes/series/hello-dotnet/docs/', 'series/hello-dotnet/').replace('.md', '');
+			return {
+				...metadata,
+				path: postPath
+			};
+		})
+	)
+		.then((posts) => (filter ? posts.filter(filter, thisArg) : posts))
+		.then((posts) => posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
+}
+
 export type { Post };
 export {
 	// NavbarType,
-	getPosts
+	getPosts,
+	getSeriesHelloDotnetPosts
 };

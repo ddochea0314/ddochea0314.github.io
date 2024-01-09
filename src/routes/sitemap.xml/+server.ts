@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { getPosts } from '$lib';
+import { getPosts, getSeriesHelloDotnetPosts } from '$lib';
 
 // adapter-static build 오류 발생하여 추가
 export const prerender = true;
@@ -17,6 +17,7 @@ export const GET: RequestHandler = async ({ setHeaders }) => {
 		.map((p) => p.tags)
 		.flat()
 		.filter((v, i, a) => a.indexOf(v) === i);
+  const seriesHelloDotnetPosts = await getSeriesHelloDotnetPosts();
 
 	const xml = `<?xml version="1.0" encoding="UTF-8" ?>
     <urlset
@@ -54,7 +55,7 @@ export const GET: RequestHandler = async ({ setHeaders }) => {
           </url>`
 				)
 				.join('')}
-    ${/*tags
+    ${tags
 			.map(
 				(tag) => `<url>
                 <loc>${website}/tags/${tag}</loc>
@@ -62,7 +63,20 @@ export const GET: RequestHandler = async ({ setHeaders }) => {
                 <priority>0.8</priority>
             </url>`
 			)
-      .join('')*/ ''}
+      .join('')}
+      ${seriesHelloDotnetPosts.map
+        ((post) => `<url>
+            <loc>${website}/${post.path}</loc>
+            <lastmod
+              >${
+                new Date(post.date).toISOString()
+              }</lastmod
+            >
+            <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
+          </url>`
+        )
+        .join('')}
     </urlset>`;
 	return new Response(xml);
 };
