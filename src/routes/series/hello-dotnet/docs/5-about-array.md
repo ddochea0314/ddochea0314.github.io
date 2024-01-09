@@ -113,7 +113,7 @@ namespace HelloDotnet
 }
 ```
 
-> 위 예제는 신규 프로젝트 생성시 `Do not use top-level statements`를 선택했을 떄 자동 생성되는 `Program.cs` 파일을 토대로 작성하였습니다. 자세한 내용은 [프로젝트 생성](./3-create-project)을 참고하시기 바랍니다.
+> 위 예제는 신규 프로젝트 생성시 `Do not use top-level statements`를 선택했을 떄 자동 생성되는 `Program.cs` 파일을 토대로 작성하였습니다. 자세한 내용은 [프로젝트 생성](./3-create-helloworld)을 참고하시기 바랍니다.
 
 ## 3. 배열의 길이
 

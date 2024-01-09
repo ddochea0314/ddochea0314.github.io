@@ -5,7 +5,7 @@ date: '2023-12-24 01:46:12'
 tags: ['dotnet', 'csharp', 'hello-dotnet']
 prev: {
     title: '1. .NET 이란?',
-    link: './1-intro-what-is-dotnet'
+    link: './1-what-is-dotnet'
 }
 next: {
     title: '3. Hello World 프로그램 만들기',
