@@ -29,6 +29,7 @@ interface Post {
 
 export type SeriesPost = {
     title: string;
+	description: string;
     date: string;
     tags: string[];
     content: any;

@@ -10,6 +10,7 @@ export const load = (async ({ params: { slug } }) => {
         return {
             post : <SeriesPost> {
                 title: post.metadata.title,
+                description: post.metadata.description,
                 date: post.metadata.date,
                 tags: post.metadata.tags,
                 content: post.default,

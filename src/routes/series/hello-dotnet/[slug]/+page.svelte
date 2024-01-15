@@ -1,9 +1,53 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 
-	export let data: PageData;
-</script>
+	export let data : PageData;
 
+	const siteName = '또치의 손수 만든 삽질 보관함';
+	const title = `${data.post.title} - ${siteName}`
+	const description = data.post.description;
+	const type = 'article';
+	const url = 'https://ddochea0314.github.io';
+
+	const ldjson = {
+			'@context': 'http://schema.org',
+			'@type': type,
+			headline: title,
+			description: description,
+			author: {
+				'@type': 'Person',
+				name: 'ddochea'
+			},
+			publisher: {
+				'@type': 'Organization',
+				name: 'ddochea',
+				logo: {
+					'@type': 'ImageObject',
+					url: 'https://ddochea0314.github.io/favicon.ico'
+				}
+			},
+			mainEntityOfPage: {
+				'@type': 'WebPage',
+				'@id': url
+			},
+			image: 'https://ddochea0314.github.io/favicon.ico'
+		};
+</script>
+<svelte:head>
+	<meta name="title" content={title} />
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:type" content={type} />
+	<meta property="og:site_name" content={siteName} />
+	<meta property="og:url" content={url} />
+	<meta property="og:image" content="https://ddochea0314.github.io/favicon.png" />
+	<meta name="keywords" content={data.post.tags.join(',')} />
+	<meta property="og:article:author" content="ddochea" />
+	<meta name="by" content="ddochea" />
+	<title>{title}</title>
+	{@html `<script type="application/ld+json">${JSON.stringify(ldjson)}</script>`}
+</svelte:head>
 <main>
 	<div
 		class="relative w-full px-6 py-12 bg-base-100 shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28"
