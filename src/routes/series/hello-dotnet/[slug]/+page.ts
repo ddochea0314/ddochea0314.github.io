@@ -15,7 +15,8 @@ export const load = (async ({ params: { slug } }) => {
                 tags: post.metadata.tags,
                 content: post.default,
                 prev: post.metadata?.prev,
-                next: post.metadata?.next
+                next: post.metadata?.next,
+                path: slug,
             } 
         };
     }

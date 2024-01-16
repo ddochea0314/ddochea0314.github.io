@@ -4,12 +4,16 @@
 	export let data : PageData;
 
 	const siteName = '또치의 손수 만든 삽질 보관함';
-	const title = `${data.post.title} - ${siteName}`
-	const description = data.post.description;
-	const type = 'article';
-	const url = 'https://ddochea0314.github.io';
+	// const title = `${data.post.title} - ${siteName}`
+	// const description = data.post.description;
+	// const type = 'article';
+	// const url = 'https://ddochea0314.github.io';
 
-	const ldjson = {
+	$: title = `${data.post.title} - ${siteName}`
+	$: description = data.post.description;
+	$: type = 'article';
+	$: url = `https://ddochea0314.github.io/series/hello-dotnet/${data.post.path}`;
+	$: ldjson = {
 			'@context': 'http://schema.org',
 			'@type': type,
 			headline: title,
