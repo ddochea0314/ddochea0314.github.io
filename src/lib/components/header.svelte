@@ -60,6 +60,7 @@
 	<meta property="og:url" content={url} />
 	<meta property="og:image" content="https://ddochea0314.github.io/favicon.png" />
 	<meta name="keywords" content={tags.join(',')} />
+	<link rel="canonical" href={url} />
 	{#if type === 'website'}
 		<meta name="author" content="ddochea" />
 	{:else if type === 'article'}

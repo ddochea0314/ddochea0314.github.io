@@ -49,6 +49,7 @@
 	<meta name="keywords" content={data.post.tags.join(',')} />
 	<meta property="og:article:author" content="ddochea" />
 	<meta name="by" content="ddochea" />
+	<link rel="canonical" href={url} />
 	<title>{title}</title>
 	{@html `<script type="application/ld+json">${JSON.stringify(ldjson)}</script>`}
 </svelte:head>
