@@ -2,7 +2,15 @@
 title: '3. Hello World 프로그램 만들기'
 description: '개발 환경을 설치 후, 입문자의 통과의례라 할 수 있는 Hello World 프로그램을 생성해봅니다.'
 date: '2023-12-25 00:29:00'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '2. 개발환경 구성하기',
     link: './2-setup-dotnet-develop-enviroment'

@@ -2,7 +2,15 @@
 title: '12. 클래스 - 상속'
 description: '클래스는 상속을 통해 다른 클래스의 멤버를 물려받을 수 있습니다.'
 date: '2023-12-30 09:54:33'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '11. 클래스 - 생성자와 소멸자',
     link: './11-constructor-and-destructor'

@@ -2,7 +2,15 @@
 title: '6. 값 형식(Value Type)과 참조 형식(Reference Type)의 차이점'
 description: '값 형식(Value Type)과 참조 형식(Reference Type)의 차이점을 알아봅시다.'
 date: '2023-12-27 02:43:00'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '5. 배열',
     link: './5-about-array'

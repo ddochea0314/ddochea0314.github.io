@@ -2,7 +2,15 @@
 title: '11. 클래스 - 생성자와 소멸자'
 description: '클래스에는 생성자와 소멸자라는 특별한 메서드가 있습니다.'
 date: '2023-12-30 01:22:31'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '10. 클래스 - 접근 제한자',
     link: './10-class'

@@ -2,7 +2,15 @@
 title: '7. 연산자'
 description: '연산자(Operator)란 프로그래밍 언어에서 특정한 연산을 수행하기 위해 사용되는 기호입니다.'
 date: '2023-12-28 11:00:22'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '6. 값 형식과 참조 형식의 차이점',
     link: './6-value-type-and-reference-type'

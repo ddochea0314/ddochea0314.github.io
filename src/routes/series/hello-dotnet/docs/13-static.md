@@ -2,7 +2,15 @@
 title: '13. 정적(static)요소 정리'
 description: 'static 키워드를 사용하여 정적 요소를 만들 수 있습니다.'
 date: '2023-12-31 09:04:06'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '12. 클래스 - 상속',
     link: './12-inheritance'

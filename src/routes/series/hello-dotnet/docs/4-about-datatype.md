@@ -2,7 +2,15 @@
 title: '4. C# 기본 자료형(Data Type)'
 description: 'C# 에는 숫자, 문자열, 논리값 등의 기본적인 데이터 타입이 있습니다. 이번 단계에서는 C#의 기본 데이터 타입에 대해 알아봅니다.'
 date: '2023-12-25 03:45:00'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '3. Hello World 프로그램 만들기',
     link: './3-create-helloworld'

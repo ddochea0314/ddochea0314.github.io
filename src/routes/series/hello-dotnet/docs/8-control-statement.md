@@ -2,7 +2,15 @@
 title: '8. 제어문'
 description: '제어문(Control Statement)은 프로그램의 흐름을 제어하는 문장입니다.'
 date: '2023-12-29 01:05:42'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '7. 연산자',
     link: './7-operator'

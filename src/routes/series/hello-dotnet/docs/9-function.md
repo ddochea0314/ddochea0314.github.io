@@ -2,7 +2,15 @@
 title: '9. 함수(Function)'
 description: '함수(Function)는 프로그램의 기능을 모듈화하는 문장입니다. 특정 기능을 수행하는 코드를 정해진 형식으로 묶어, 필요시 반복 호출을 통해 코드의 재사용성을 향상시킵니다.'
 date: '2023-12-29 02:45:50'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '8. 제어문',
     link: './8-control-statement'

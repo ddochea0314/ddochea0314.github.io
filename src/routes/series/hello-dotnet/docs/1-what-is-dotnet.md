@@ -2,7 +2,15 @@
 title: '1. .NET 이란?'
 description: '.NET은 마이크로소프트에서 만든 프로그래밍 플랫폼입니다. 과거 .NET은 .NET 윈도우에서만 사용할 수 있었지만, .NET Core가 나오면서 리눅스나 맥에서도 사용할 수 있게 되었습니다.'
 date: '2023-12-24 00:12:45'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 next: {
     title: '2. 개발환경 구성하기',
     link: './2-setup-dotnet-develop-enviroment'

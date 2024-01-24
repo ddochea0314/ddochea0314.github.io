@@ -2,7 +2,15 @@
 title: '5. 배열'
 description: '배열(Array)이란 동일한 데이터 타입의 데이터를 연속된 메모리 공간에 저장하는 자료구조입니다.'
 date: '2023-12-26 05:54:00'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '4. C# 기본 자료형(Data Type)',
     link: './4-about-datatype'

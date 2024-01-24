@@ -2,7 +2,15 @@
 title: '2. 개발환경 구성하기'
 description: '.NET 개발환경을 설치하는 방법을 알아봅니다.'
 date: '2023-12-24 01:46:12'
-tags: ['dotnet', 'csharp', 'hello-dotnet']
+tags: 
+- 'dotnet'
+- 'csharp'
+- 'hello-dotnet'
+- '.NET 튜토리얼'
+- '.NET Tutorial'
+- 'C# 튜토리얼'
+- 'C# Tutorial'
+- 'Get started with C#'
 prev: {
     title: '1. .NET 이란?',
     link: './1-what-is-dotnet'
